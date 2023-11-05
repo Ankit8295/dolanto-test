@@ -8,7 +8,6 @@ import SectionC from "@/src/components/homepage-sections/SectionC";
 import { faqData, offeringSectors } from "@/src/constants/homepage";
 import certificateImg from "@/public/media/homepage/certificate.png";
 import HeroSection from "@/src/components/homepage-sections/HeroSection";
-import CardsSection from "@/src/components/homepage-sections/CardsSection";
 import SectionB from "@/src/components/homepage-sections/SectionB";
 
 export default function Page() {
@@ -42,7 +41,6 @@ export default function Page() {
           </div>
         ))}
       </div>
-      {/* <CardsSection /> */}
       <div className="w-full flex justify-between max-lg:flex-col-reverse max-lg:gap-10">
         <div className="w-[49%] max-lg:w-full rounded-xl bg-lightBLue p-5 flex flex-col items-start gap-5">
           <div className="bg-darkBlue text-white rounded-xl py-[6px] px-3 text-sm font-medium">
