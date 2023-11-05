@@ -11,7 +11,7 @@ import { homeAboutCards } from "@/src/constants/homepage";
 export default function SectionB() {
   return (
     <div className="grid relative grid-cols-2 max-lg:grid-cols-1 max-lg:grid-rows-[auto]  gap-5">
-      <div className="w-full  relative rounded-3xl">
+      <div className="w-full  relative rounded-3xl max-lg:row-start-2">
         <Image
           src={aboutImg}
           priority={true}
@@ -36,11 +36,11 @@ export default function SectionB() {
           ))} */}
       </div>
 
-      <div className="w-full  h-[70%] flex flex-col items-start justify-between ">
-        <div className="pl-6 max-lg:hidden">
+      <div className="w-full  h-[70%] flex flex-col gap-5  items-start justify-between max-lg:row-start-1">
+        <div className="pl-6 max-lg:pl-0">
           <BlueButtonWrapper>About Us</BlueButtonWrapper>
         </div>
-        <div className="pl-6 w-full  max-lg:hidden">
+        <div className="pl-6 w-full  max-lg:pl-0">
           <HeadingTag>
             With each client, we <GradientText>strive</GradientText> to stand
             out from the crowd and bring a fresh wind of change
@@ -51,16 +51,16 @@ export default function SectionB() {
           priority={true}
           quality={100}
           alt={"dolanto clients image"}
-          className="object-fill w-[40%] h-full max-h-14 pl-6  max-lg:hidden"
+          className="object-fill w-[40%] h-full max-h-14 pl-6  max-lg:pl-0"
         />
-        <div className="flex gap-5 w-full pl-6 pb-10  max-lg:hidden">
+        <div className="flex gap-5 w-full pl-6 pb-10  max-lg:pl-0 max-lg:flex-col">
           <LinkButton label={"Contact Us"} link="/" />
           <BlueButtonWrapper Icon={<DownloadButtonIcon />}>
             Download Brochure
           </BlueButtonWrapper>
         </div>
 
-        <div className="flex w-full absolute p-3 rounded-3xl bottom-0 right-0 z-10 bg-white max-h-[35%] max-w-[75%] gap-5 max-lg:gap-0 max-lg:gap-y-5 max-lg:justify-between max-lg:flex-wrap ">
+        <div className="flex w-full max-lg:hidden absolute p-3 rounded-3xl bottom-0 right-0 z-10 bg-white max-h-[35%] max-w-[75%] gap-5 max-lg:gap-0 max-lg:gap-y-5 max-lg:justify-between max-lg:flex-wrap ">
           {homeAboutCards
             .filter((card, i) => i === 0)
             .map((textCard) => (
