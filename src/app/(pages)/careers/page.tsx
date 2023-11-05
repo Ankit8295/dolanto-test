@@ -62,7 +62,7 @@ export default function Page() {
             impressed us.”
           </p>
           <div className="grid grid-cols-[40px_minmax(100px,_1fr)] ">
-            <div clasName=" w-full h-full p-2 flex items-start justify-center">
+            <div className=" w-full h-full p-2 flex items-start justify-center">
               <Image
                 width={30}
                 height={30}
