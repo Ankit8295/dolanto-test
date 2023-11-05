@@ -113,6 +113,38 @@ const offeringSectors: {
     title: "distillary",
     image: distillary,
   },
+  {
+    title: "Formulation",
+    image: pharmacy,
+  },
+  {
+    title: "Biopharmaceuticals",
+    image: dairy,
+  },
+  {
+    title: "Chemicals",
+    image: cement,
+  },
+  {
+    title: "Healthcare",
+    image: distillary,
+  },
+  {
+    title: "Formulation",
+    image: pharmacy,
+  },
+  {
+    title: "Biopharmaceuticals",
+    image: dairy,
+  },
+  {
+    title: "Chemicals",
+    image: cement,
+  },
+  {
+    title: "Healthcare",
+    image: distillary,
+  },
 ];
 
 const productServiceModals: {
