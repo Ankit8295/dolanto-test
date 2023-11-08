@@ -7,11 +7,11 @@ type Props = {
 
 export function GradientText({ children, customTailwindStyle }: Props) {
   return (
-    <span
+    <p
       className={`bg-gradient-main  bg-clip-text text-transparent ${customTailwindStyle}`}
     >
       {children}
-    </span>
+    </p>
   );
 }
 export function HeadingTag({ children }: { children: React.ReactNode }) {
