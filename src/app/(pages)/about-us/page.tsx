@@ -2,26 +2,31 @@
 import AboutUsCards from "@/src/components/cards/AboutUsCards";
 import PageDescription from "@/src/components/page-description/PageDescription";
 import ourStoryImg from "@/public/media/about-us/story.png";
-import { GradientText } from "@/src/components/tags/Tags";
+import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AboutUsBoardSlide from "@/src/components/cards/AboutUsBoardSlide";
-import { teamDetails } from "@/src/constants/aboutus";
+import { journeyDetails, teamDetails } from "@/src/constants/aboutus";
 import { useEffect, useState } from "react";
+import AboutUsJourneySlide from "@/src/components/cards/AboutUsJourneySlide";
 
 export default function Page() {
-  const [sliderWidth, setSliderWidth] = useState<number>(window.innerWidth);
+  const [sliderWidth, setSliderWidth] = useState<number>(0);
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== "undefined") {
       setSliderWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [sliderWidth]);
+
+      const handleResize = () => {
+        setSliderWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
   return (
     <>
       <PageDescription title="ABOUT US">
@@ -40,9 +45,37 @@ export default function Page() {
         industries while meeting the most stringent regulatory requirements. We
         are ISO 9001:2015 certified.
       </AboutUsCards>
-      <GradientText customTailwindStyle="text-5xl text-center w-full mt-14">
-        “MEET THE BOARD BEHIND THE SUCCESS”
-      </GradientText>
+      <Swiper
+        slidesPerView={sliderWidth <= 1024 ? 1 : 3}
+        navigation={{
+          enabled: true,
+          nextEl: ".nextA",
+          prevEl: ".prevA",
+        }}
+        spaceBetween={sliderWidth <= 1024 ? 5 : 0}
+        modules={[Navigation]}
+        className="mySwiper w-[90%] max-lg:w-full mt-14"
+      >
+        {journeyDetails.map((journey, index) => (
+          <SwiperSlide
+            key={journey.year}
+            className={` !flex items-center justify-center `}
+          >
+            <AboutUsJourneySlide
+              alignTop={
+                sliderWidth <= 1024 ? true : index % 2 === 0 ? true : false
+              }
+              data={journey}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <HeadingTag customTailwindStyle=" w-full ">
+        <GradientText customTailwindStyle=" text-center w-full ">
+          “MEET THE BOARD BEHIND THE SUCCESS”
+        </GradientText>
+      </HeadingTag>
+
       <Swiper
         slidesPerView={sliderWidth <= 1024 ? 1 : 4}
         navigation={{
@@ -50,8 +83,6 @@ export default function Page() {
           nextEl: ".next",
           prevEl: ".prev",
         }}
-        // onNavigationPrev={(swiper) => console.log(swiper)}
-        // onNavigationNext={(swiper) => console.log(swiper)}
         modules={[Navigation]}
         spaceBetween={20}
         className="mySwiper w-full"
@@ -67,7 +98,7 @@ export default function Page() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="relative flex justify-end gap-5  w-[90%] mx-auto  mb-20">
+      <div className="relative flex justify-end gap-5  w-[90%] mx-auto  mb-20 max-lg:mb-10">
         <button className="prev group  disabled:cursor-not-allowed ">
           <svg
             width="30"

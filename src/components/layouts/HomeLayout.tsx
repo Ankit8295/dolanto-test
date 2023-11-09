@@ -6,7 +6,7 @@ type Props = {
 
 export default function HomeLayout({ children }: Props) {
   return (
-    <div className="w-[95%] mx-auto max-w-[1550px] flex flex-col gap-12">
+    <div className="w-[92.5%] mx-auto max-w-[1550px] flex flex-col gap-12">
       {children}
     </div>
   );

@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="flex max-lg:flex-col max-lg:gap-6 items-start justify-between">
         <div className="w-1/2 max-lg:w-full flex flex-col gap-1 max-lg:justify-center">
           <HeadingTag>
-            <GradientText>Transforming</GradientText> Possibilities into{" "}
+            <GradientText>Transforming</GradientText> Possibilities into
             <GradientText>Reality</GradientText> with Premier EPC Solutions.
           </HeadingTag>
           <div className="flex gap-5 max-sm:hidden">
