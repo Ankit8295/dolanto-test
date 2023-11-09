@@ -46,6 +46,7 @@ export default function Footer({}: Props) {
               <Link href={routes.clientele}>Clientele</Link>
               <Link href={routes.newsstand}>Newsstand</Link>
               <Link href={routes.careers}>Careers</Link>
+              <Link href={routes.contact_us}>Contact Us</Link>
             </div>
           </div>
           <div className="flex w-full items-center justify-between text-white max-sm:flex-col-reverse max-sm:gap-3 max-sm:items-start">

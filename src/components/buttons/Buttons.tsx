@@ -53,7 +53,7 @@ export function BlueButtonWrapper({
   );
 }
 
-export function GradientBgButton({ children }: { children: React.ReactNode }) {
+export function GradientBgHover({ children }: { children: React.ReactNode }) {
   return (
     <div className="text-black cursor-pointer hover:bg-gradient-main rounded-md font-medium hover:text-white   px-5 flex gap-2 items-center justify-center   py-2">
       {children}

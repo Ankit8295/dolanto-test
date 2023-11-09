@@ -12,7 +12,7 @@ export default function PageDescription({ children, title }: Props) {
       <h1 className="text-6xl max-lg:text-3xl font-semibold">
         <GradientText>{title}</GradientText>
       </h1>
-      <span className="text-center text-xl max-lg:text-base w-2/3 max-md:w-[90%]">
+      <span className="text-center text-xl max-lg:text-sm w-2/3 max-md:w-[90%]">
         {children}
       </span>
     </div>

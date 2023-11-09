@@ -1,16 +1,12 @@
-"use client";
 import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
 import careersImg from "@/public/media/careers/careers.png";
 import reviewAboutImg from "@/public/media/homepage/reviewAbout.png";
 import Image from "next/image";
 import { careerCard2Data, careerCardData } from "@/src/constants/career";
-import CareerCard from "@/src/components/career-card/CareerCard";
-import { useState } from "react";
-export default function Page() {
-  const [openJobDetails, setOpenJobDetails] = useState(false);
-  function openJobDetailFn() {
-    setOpenJobDetails(!openJobDetails);
-  }
+import CareerCard from "@/src/components/careers/CareerCard";
+import JobDetail from "@/src/components/careers/JobDetail";
+import { jobDetail } from "@/src/constants/career/jobs";
+export default function page() {
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="grid grid-cols-2 gap-x-8  max-[1200px]:gap-x-0 max-[1200px]:gap-y-8 max-[1200px]:grid-cols-1 max-[1200px]:grid-rows-[auto]">
@@ -54,7 +50,6 @@ export default function Page() {
               fill="white"
             />
           </svg> */}
-
           <p className="text-[10px] lg:text-xs leading-normal">
             “Exceptional Precision and Quality! Dolanto’s clean room solution
             exceeded our expectations. Their meticulous attention to detail and
@@ -110,223 +105,10 @@ export default function Page() {
           <p className="lg:-rotate-90">View Openings</p>
         </div>
       </div>
-      <div className="w-full pt-5 flex flex-col items-start gap-10">
-        <div className="w-full flex flex-col gap-5 bg-lightBLue p-2 rounded-3xl">
-          <div className="relative flex gap-5 items-center  p-3">
-            <div
-              onClick={openJobDetailFn}
-              className={`cursor-pointer w-10 max-sm:hidden h-10 text-xl rounded-full ${
-                openJobDetails
-                  ? "bg-blueMain text-white rotate-90"
-                  : "bg-white rotate-0"
-              } flex items-center justify-center transition-all duration-300`}
-            >
-              {">"}
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-3 items-center">
-                <div
-                  onClick={openJobDetailFn}
-                  className={`cursor-pointer w-8 hidden max-sm:flex h-8 text-xl rounded-full ${
-                    openJobDetails
-                      ? "bg-blueMain text-white rotate-90"
-                      : "bg-white rotate-0"
-                  }  items-center justify-center transition-all duration-300`}
-                >
-                  {">"}
-                </div>
-                <h2 className="font-medium text-2xl max-sm:text-lg">
-                  Product Designer
-                </h2>
-              </div>
-              <span className="max-sm:text-sm">
-                We’re Looking for a mid-level designer to join our team
-              </span>
-              <div className="flex gap-5  py-1 max-sm:p-0 max-sm:justify-between">
-                <span className="bg-white rounded-xl p-2">100% Remote</span>
-                <span className="bg-white rounded-xl p-2">Full-time</span>
-              </div>
-            </div>
-            <span className="max-sm:text-xs absolute top-[2%] right-[2%]">
-              Design
-            </span>
-          </div>
-          {openJobDetails && (
-            <div className="w-full p-3 grid-cols-3 max-lg:grid-cols-1 max-lg:grid-rows-[auto] max-lg:gap-y-5 grid">
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Task
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Terms
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Expectations
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-            </div>
-          )}
-        </div>
-        <div className="w-full flex flex-col gap-5 bg-lightBLue p-2 rounded-3xl">
-          <div className="relative flex gap-5 items-center  p-3">
-            <div
-              onClick={openJobDetailFn}
-              className={`cursor-pointer w-10 max-sm:hidden h-10 text-xl rounded-full ${
-                openJobDetails
-                  ? "bg-blueMain text-white rotate-90"
-                  : "bg-white rotate-0"
-              } flex items-center justify-center transition-all duration-300`}
-            >
-              {">"}
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-3 items-center">
-                <div
-                  onClick={openJobDetailFn}
-                  className={`cursor-pointer w-8 hidden max-sm:flex h-8 text-xl rounded-full ${
-                    openJobDetails
-                      ? "bg-blueMain text-white rotate-90"
-                      : "bg-white rotate-0"
-                  }  items-center justify-center transition-all duration-300`}
-                >
-                  {">"}
-                </div>
-                <h2 className="font-medium text-2xl max-sm:text-lg">
-                  Product Designer
-                </h2>
-              </div>
-              <span className="max-sm:text-sm">
-                We’re Looking for a mid-level designer to join our team
-              </span>
-              <div className="flex gap-5  py-1 max-sm:p-0 max-sm:justify-between">
-                <span className="bg-white rounded-xl p-2">100% Remote</span>
-                <span className="bg-white rounded-xl p-2">Full-time</span>
-              </div>
-            </div>
-            <span className="max-sm:text-xs absolute top-[2%] right-[2%]">
-              Design
-            </span>
-          </div>
-          {openJobDetails && (
-            <div className="w-full p-3 grid-cols-3 max-lg:grid-cols-1 max-lg:grid-rows-[auto] max-lg:gap-y-5 grid">
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Task
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Terms
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-              <div className="w-full flex flex-col items-center gap-2">
-                <h2 className="text-[#006AEA] text-lg text-start w-2/3 max-md:w-full pl-5">
-                  Expectations
-                </h2>
-                <ol className="list-disc pl-5 text-sm w-2/3 max-md:w-full">
-                  <li>
-                    Reception, diagnosis and treatment of animals with
-                    cardiological diseases
-                  </li>
-                  <li>
-                    Conducting ECHOKG, ECG, dopplerography, preoperative heart
-                    screenshots; interpretation of research results
-                  </li>
-                  <li>
-                    Study of the causes of occurrence, the processes of the
-                    disease
-                  </li>
-                  <li>Development of treatment methods</li>
-                  <li>The use of medicines;</li>
-                </ol>
-              </div>
-            </div>
-          )}
-        </div>
+      <div className="w-full pt-5 flex flex-col items-start gap-7">
+        {jobDetail.map((job, i) => (
+          <JobDetail key={i} job={job} />
+        ))}
       </div>
     </div>
   );
