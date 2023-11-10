@@ -34,24 +34,28 @@ export default function SectionC({}: Props) {
               "bg-[url('/media/homepage/formulation.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl w-[48%] max-lg:w-full bg-cover bg-center p-5 flex flex-col  "
             }
           >
-            <p>Formulation</p>
-            <span className=" text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
-              ultrices libero
-            </span>
+            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur">
+              <p>Formulation</p>
+              <span className=" text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
+                ultrices libero
+              </span>
+            </div>
           </div>
           <div
             className={
               "bg-[url('/media/homepage/afterSales.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl max-lg:w-full w-[48%] bg-cover bg-center p-5 flex flex-col"
             }
           >
-            <p className="  "> After Sales Services</p>
-            <span className="text-sm  ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
-              ultrices libero
-            </span>
+            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur">
+              <p className="  "> After Sales Services</p>
+              <span className="text-sm  ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
+                ultrices libero
+              </span>
+            </div>
           </div>
         </div>
         <div
@@ -59,13 +63,15 @@ export default function SectionC({}: Props) {
             "bg-[url('/media/homepage/customSolution.png')] rounded-3xl w-full bg-cover bg-center text-white p-5"
           }
         >
-          <div className="w-1/2 max-lg:w-full flex flex-col pt-[15%] max-sm:pt-[25%]">
-            <p className="">Custom Solutions</p>
-            <span className=" text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
-              ultrices libero
-            </span>
+          <div className="w-2/3 max-lg:w-full flex flex-col pt-[15%] max-sm:pt-[25%] ">
+            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur">
+              <p className="">Custom Solutions</p>
+              <span className=" text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu
+                ultrices libero
+              </span>
+            </div>
           </div>
         </div>
       </div>

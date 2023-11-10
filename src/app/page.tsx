@@ -20,23 +20,18 @@ export default function Page() {
       <div className="flex justify-center items-center w-full">
         <HeadingTag>We Provided offerings in different sectors</HeadingTag>
       </div>
-      <div className="w-full grid grid-cols-4 max-lg:grid-cols-2 max-lg:grid-rows-6 grid-rows-3 gap-10  max-lg:gap-4 justify-center items-center">
+      <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
         {offeringSectors.map((card) => (
-          <div
-            key={card.title}
-            className="relative rounded-3xl w-full h-full flex justify-center items-center"
-          >
-            <span className="capitalize absolute left-[5%] top-[6%] bg-white py-2 px-4 rounded-lg">
+          <div key={card.title} className="relative rounded-3xl h-full w-full">
+            <span className="capitalize absolute left-[4%] top-[8%] bg-white md:py-2 md:px-4 md:rounded-lg px-2 py-1 text-center min-w-[100px] rounded-full">
               {card.title}
             </span>
             <Image
               src={card.image}
               width={400}
-              priority={true}
-              quality={100}
               height={200}
-              className="object-fill"
               alt={card.title}
+              className="h-full w-full"
             />
           </div>
         ))}
@@ -48,7 +43,7 @@ export default function Page() {
           </div>
           <div className="flex w-full flex-col gap-2">
             {faqData.map((card, i: number) => (
-              <FaqList key={i} ans={card.ans} qs={card.qs} />
+              <FaqList key={card.qs} ans={card.ans} qs={card.qs} />
             ))}
           </div>
         </div>

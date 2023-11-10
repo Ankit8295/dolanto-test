@@ -34,9 +34,18 @@ export default function Footer({}: Props) {
               <Image src={logo} alt={"dolanto logo"} width={150} height={100} />
             </div>
             <div className="row-start-2 max-sm:col-span-1 max-sm:w-full max-sm:row-start-3 text-white flex flex-col items-start gap-3 font-medium">
-              <span>{aboutDolantoContact.address}</span>
-              <span>{aboutDolantoContact.phone}</span>
-              <span>{aboutDolantoContact.email}</span>
+              <div>
+                <p className="text-xs text-[#0045AA] leading-6">Address: </p>
+                <span>{aboutDolantoContact.address}</span>
+              </div>
+              <div>
+                <p className="text-xs text-[#0045AA] leading-6">Phone: </p>
+                <span>{aboutDolantoContact.phone}</span>
+              </div>
+              <div>
+                <p className="text-xs text-[#0045AA] leading-6">Support: </p>
+                <span>{aboutDolantoContact.email}</span>
+              </div>
             </div>
             <div className="col-span-1 row-span-2 col-start-2 max-sm:row-start-2  max-sm:row-span-1 max-sm:col-start-1 max-sm:items-start text-white flex flex-col items-end gap-4 font-medium">
               <Link href={routes.home}>Home</Link>
