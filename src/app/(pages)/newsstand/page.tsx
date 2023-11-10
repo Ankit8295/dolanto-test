@@ -1,4 +1,5 @@
 import PageDescription from "@/src/components/page-description/PageDescription";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -11,6 +12,12 @@ export default function page() {
         United Kingdom MRC has supported the progression of high end engineering
         industries through innovative design concepts and material technologies.
       </PageDescription>
+      <Link href={`newsstand/${"newsA"}`} className="text-5xl text-black">
+        NewA
+      </Link>
+      <Link href={`newsstand/${"newsB"}`} className="text-5xl text-black">
+        NewB
+      </Link>
     </div>
   );
 }
