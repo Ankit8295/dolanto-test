@@ -22,7 +22,7 @@ export default function Footer({}: Props) {
   return (
     <footer className="w-full ">
       <div
-        className={`relative w-[95%] max-w-[1550px] max-sm:w-full mx-auto py-6 max-sm:pb-0 grid ${
+        className={`relative w-[95%] max-w-[1750px] max-sm:w-full mx-auto py-6 max-sm:pb-0 grid ${
           wide ? "grid-cols-2" : "grid-cols-3"
         } gap-5 grid-rows-1 max-lg:grid-cols-1 ${
           wide ? "" : "max-lg:grid-rows-2"

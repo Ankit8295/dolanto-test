@@ -8,7 +8,11 @@ type Props = {
 export default function AboutUsBoardSlide({ image }: Props) {
   return (
     <div className={`h-full w-full  flex items-center justify-center`}>
-      <Image src={image} alt="empA" className="object-fill w-full h-full" />
+      <Image
+        src={image}
+        alt="empA"
+        className="object-contain lg:object-fill lg:w-full h-full"
+      />
     </div>
   );
 }

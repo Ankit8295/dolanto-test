@@ -20,8 +20,11 @@ export default function SectionC({}: Props) {
 
   return (
     <div className="w-full  flex max-lg:flex-col max-lg:gap-10">
-      <div className="w-1/2 pr-5 max-lg:pr-0 max-lg:w-full flex items-start flex-col gap-5">
-        <div className="w-full flex flex-col items-start gap-2">
+      <div className="w-1/2 pr-5 max-lg:pr-0 max-lg:w-full flex items-start  flex-col gap-5">
+        <div
+          data-aos="fade-top"
+          className="w-full flex flex-col items-start gap-2"
+        >
           <BlueButtonWrapper>Products & Services</BlueButtonWrapper>
           <HeadingTag>
             We Believe in <GradientText>uncompromising</GradientText> attention
@@ -30,6 +33,7 @@ export default function SectionC({}: Props) {
         </div>
         <div className="flex w-full max-lg:flex-col text-white justify-between max-lg:gap-5">
           <div
+            data-aos="fade-right"
             className={
               "bg-[url('/media/homepage/formulation.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl w-[48%] max-lg:w-full bg-cover bg-center p-5 flex flex-col  "
             }
@@ -44,6 +48,7 @@ export default function SectionC({}: Props) {
             </div>
           </div>
           <div
+            data-aos="fade-left"
             className={
               "bg-[url('/media/homepage/afterSales.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl max-lg:w-full w-[48%] bg-cover bg-center p-5 flex flex-col"
             }
@@ -59,6 +64,7 @@ export default function SectionC({}: Props) {
           </div>
         </div>
         <div
+          data-aos="fade-up"
           className={
             "bg-[url('/media/homepage/customSolution.png')] rounded-3xl w-full bg-cover bg-center text-white p-5"
           }
@@ -75,15 +81,20 @@ export default function SectionC({}: Props) {
           </div>
         </div>
       </div>
-      <div className="w-1/2 max-lg:w-full flex items-center justify-end flex-col max-lg:gap-6 gap-14">
-        <Image
-          src={productServiceModals[activeHomePageModalView]}
-          alt={"modal image"}
-          width={450}
-          height={300}
-          priority={true}
-          quality={100}
-        />
+      <div className="w-1/2 max-lg:w-full flex items-center justify-end flex-col max-lg:gap-6">
+        <div
+          data-aos="fade-down"
+          className="w-full h-full flex items-center justify-center "
+        >
+          <Image
+            src={productServiceModals[activeHomePageModalView]}
+            alt={"modal image"}
+            width={550}
+            height={300}
+            priority={true}
+            quality={100}
+          />
+        </div>
         <div className="grid grid-cols-3 p-5 gap-2 bg-[#F1F4F9] max-lg:grid-cols-1 max-lg:w-full rounded-3xl">
           {productServiceModalsTitle.map((title) => (
             <span

@@ -42,14 +42,16 @@ export function BlueButtonWrapper({
   children,
   Icon,
   rounded = "rounded-3xl",
+  width = "w-fit",
 }: {
   children: React.ReactNode;
   Icon?: React.ReactElement;
   rounded?: string;
+  width?: "w-fit" | "w-full";
 }) {
   return (
     <div
-      className={`text-blueMain group cursor-pointer transition-colors bg-lightBLue ${rounded}  w-fit p-4 flex gap-2 items-center justify-center text-sm font-medium  hover:bg-blueMain hover:text-white`}
+      className={`text-blueMain group cursor-pointer transition-colors bg-lightBLue ${rounded} ${width} p-4 flex gap-2 items-center justify-center text-sm font-medium  hover:bg-blueMain hover:text-white`}
     >
       {children}
       {Icon}

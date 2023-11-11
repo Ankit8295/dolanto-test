@@ -2,19 +2,27 @@ import { heroSectionCards } from "@/src/constants/homepage";
 import Image from "next/image";
 import React from "react";
 import { BlueButtonWrapper, LinkButton } from "../buttons/Buttons";
-import { DownloadButtonIcon } from "../icons/Icons";
+import { DownloadButtonIcon, TiltArrow } from "../icons/Icons";
 import { GradientText, HeadingTag } from "../tags/Tags";
+import { routes } from "@/src/constants/routes";
 
 export default function HeroSection() {
   return (
-    <div className="grid grid-col-2 lg:grid-cols-4 gap-2 sm:gap-5 overflow-hidden">
-      <div className="col-span-2 flex justify-between flex-col pb-4">
+    <div className="grid grid-col-2 lg:grid-cols-4 gap-7 max-sm:gap-5 overflow-hidden pt-5">
+      <div
+        data-aos="fade-top"
+        className="col-span-2 flex justify-between flex-col pb-4 max-sm:pb-0"
+      >
         <HeadingTag>
           <GradientText>Transforming</GradientText> Possibilities into
           <GradientText> Reality</GradientText> with Premier EPC Solutions.
         </HeadingTag>
         <div className="flex gap-5 max-sm:hidden w-fit whitespace-nowrap">
-          <LinkButton customStyles="rounded-full" label={"About Us"} link="/" />
+          <LinkButton
+            customStyles="rounded-full"
+            label={"About Us"}
+            link={routes.about_us}
+          />
           <BlueButtonWrapper
             rounded="rounded-full"
             Icon={<DownloadButtonIcon />}
@@ -25,7 +33,14 @@ export default function HeroSection() {
       </div>
       {heroSectionCards.map((cards, index: number) => (
         <div
-          className={`relative ${index === 0 ? "col-span-2" : "col-span-1"}`}
+          className={`relative overflow-hidden group ${
+            index === 0 ? "col-span-2" : "col-span-1"
+          }`}
+          data-aos={`${index === 0 ? "fade-down" : ""}${
+            index === 1 ? "fade-right" : ""
+          }${index === 4 ? "fade-left" : ""}${index === 2 ? "fade-up" : ""}${
+            index === 3 ? "fade-up" : ""
+          }`}
           key={cards.title}
         >
           <span
@@ -45,16 +60,33 @@ export default function HeroSection() {
             alt={cards.title}
             className="object-cover w-full h-full rounded-3xl"
           />
+          <div
+            className={`flex flex-col max-lg:hidden  ${
+              index === 0
+                ? "w-[70%] left-[2.5%] translate-y-[60%] group-hover:-translate-y-[7.5%]"
+                : " w-[90%] left-0 right-0 translate-y-2/3 group-hover:-translate-y-[7.5%]"
+            }  gap-5 items-start absolute  z-20 mx-auto bottom-0  transition-transform duration-500 `}
+          >
+            <div className="bg-white  rounded-lg p-2 cursor-pointer flex items-center justify-center">
+              <TiltArrow />
+            </div>
+            <div className=" text-black text-sm max-lg:text-xs   font-light bg-white p-2 rounded-xl">
+              {index === 0
+                ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero"
+                : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proinornare sem sed quam tempus aliquet vitae eget dolor. Proin euultrices libero"}
+            </div>
+          </div>
         </div>
       ))}
 
-      <div className="col-span-2 flex gap-5 sm:hidden  items-center flex-wrap justify-center w-full whitespace-nowrap">
+      <div className="col-span-2 flex gap-5 sm:hidden max-sm:flex-col  items-center flex-wrap justify-center w-full whitespace-nowrap">
         <LinkButton
           customStyles="rounded-full flex-1"
           label={"About Us"}
-          link="/"
+          link={routes.about_us}
         />
         <BlueButtonWrapper
+          width="w-full"
           rounded="rounded-full flex-1"
           Icon={<DownloadButtonIcon />}
         >

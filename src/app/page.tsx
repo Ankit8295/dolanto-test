@@ -9,15 +9,19 @@ import { faqData, offeringSectors } from "@/src/constants/homepage";
 import certificateImg from "@/public/media/homepage/certificate.png";
 import HeroSection from "@/src/components/homepage-sections/HeroSection";
 import SectionB from "@/src/components/homepage-sections/SectionB";
+import AutoSliderCard from "../components/slider/AutoSliderCard";
+import SliderImageComponent from "../components/slider/slider-comp/SliderImageComponent";
 
 export default function Page() {
   return (
     <HomeLayout>
       <HeroSection />
       <SectionB />
-      {/* sectionC */}
       <SectionC />
-      <div className="flex justify-center items-center w-full">
+      <div
+        data-aos="fade-top"
+        className="flex justify-center items-center w-full"
+      >
         <HeadingTag>We Provided offerings in different sectors</HeadingTag>
       </div>
       <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
@@ -42,26 +46,28 @@ export default function Page() {
             FAQ
           </div>
           <div className="flex w-full flex-col gap-2">
-            {faqData.map((card, i: number) => (
+            {faqData.map((card) => (
               <FaqList key={card.qs} ans={card.ans} qs={card.qs} />
             ))}
           </div>
         </div>
-        <div className="w-[49%] max-lg:w-full  rounded-xl flex flex-col items-start gap-5 bg-lightBLue p-5">
+        <div className="w-[49%] max-lg:w-full  rounded-xl flex flex-col items-start gap-10 bg-lightBLue p-5">
           <div className="bg-darkBlue text-white rounded-xl py-[6px] px-3 text-sm font-medium">
             Certificates
           </div>
-          <Image
-            src={certificateImg}
-            width={500}
-            height={500}
-            priority={true}
-            quality={100}
-            className="object-fill self-center"
-            alt="certificate"
+          <AutoSliderCard
+            slideData={certificates}
+            SliderCard={SliderImageComponent}
+            vertical={true}
           />
         </div>
       </div>
     </HomeLayout>
   );
 }
+const certificates = [
+  certificateImg,
+  certificateImg,
+  certificateImg,
+  certificateImg,
+];

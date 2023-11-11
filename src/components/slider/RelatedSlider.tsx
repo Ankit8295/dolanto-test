@@ -28,7 +28,7 @@ export default function ButtonSlider({ slideData, SliderCard }: Props) {
   }, []);
 
   return (
-    <div className="max-[1550px]:max-w-[90vw] max-w-[1550px] relative mx-auto ">
+    <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto ">
       <Swiper
         slidesPerView={sliderWidth <= 1024 ? 1 : 3}
         navigation={{

@@ -12,6 +12,7 @@ import cement from "@/public/media/homepage/cement.png";
 import distillary from "@/public/media/homepage/distillary.png";
 import dairy from "@/public/media/homepage/dairy.png";
 import pharmacy from "@/public/media/homepage/pharmacy.png";
+import testimonialImgA from "@/public/media/homepage/reviewAbout.png";
 
 import { StaticImageData } from "next/image";
 import { HomeModalData } from "@/src/utils/types";
@@ -166,6 +167,30 @@ const productServiceModalsTitle: HomeModalData[] = [
   "Modular_OT",
 ];
 
+const userTestimonialData = [
+  {
+    comment:
+      "Exceptional Precision and Quality! Dolanto’s clean room solution exceeded our expectations. Their meticulous attention to detail and unwavering commitment to delivering a clean room environment truly impressed us.",
+    name: "Sarah Johnson",
+    designation: "Managing Director at L&T",
+    image: testimonialImgA,
+  },
+  {
+    comment:
+      "Exceptional Precision and Quality! Dolanto’s clean room solution exceeded our expectations. Their meticulous attention to detail and unwavering commitment to delivering a clean room environment truly impressed us.",
+    name: "Sarah Johnson",
+    designation: "Managing Director at L&T",
+    image: testimonialImgA,
+  },
+  {
+    comment:
+      "Exceptional Precision and Quality! Dolanto’s clean room solution exceeded our expectations. Their meticulous attention to detail and unwavering commitment to delivering a clean room environment truly impressed us.",
+    name: "Sarah Johnson",
+    designation: "Managing Director at L&T",
+    image: testimonialImgA,
+  },
+];
+
 export {
   faqData,
   homeAboutCards,
@@ -173,4 +198,5 @@ export {
   heroSectionCards,
   productServiceModals,
   productServiceModalsTitle,
+  userTestimonialData,
 };

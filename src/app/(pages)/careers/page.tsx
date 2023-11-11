@@ -1,11 +1,13 @@
 import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
 import careersImg from "@/public/media/careers/careers.png";
-import reviewAboutImg from "@/public/media/homepage/reviewAbout.png";
 import Image from "next/image";
 import { careerCard2Data, careerCardData } from "@/src/constants/career";
 import CareerCard from "@/src/components/careers/CareerCard";
 import JobDetail from "@/src/components/careers/JobDetail";
 import { jobDetail } from "@/src/constants/career/jobs";
+import AutoSliderCard from "@/src/components/slider/AutoSliderCard";
+import SliderUserTestimonialCard from "@/src/components/slider/slider-comp/SliderUserTestimonialCard";
+import { userTestimonialData } from "@/src/constants/homepage";
 export default function page() {
   return (
     <div className="w-full flex flex-col gap-8">
@@ -34,75 +36,38 @@ export default function page() {
         />
       </div>
       <div
-        className={`grid grid-cols-2 lg:grid-cols-9 lg:grid-rows-1 gap-y-2 gap-x-2`}
+        className={`grid grid-cols-2 xl:grid-cols-9 xl:grid-rows-1  gap-y-2 gap-x-2`}
       >
-        <div className="bg-lightBLue col-span-2 lg:col-start-7 relative  rounded-2xl p-3  flex flex-col gap-4 ">
-          {/* <svg
-            width="177"
-            height="123"
-            viewBox="0 0 177 123"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 "
-          >
-            <path
-              d="M103.721 122.945L130.959 18.829L138.472 54.0035C127.515 54.0035 118.436 50.5642 111.235 43.6857C104.034 36.8071 100.434 27.5835 100.434 16.0151C100.434 4.44656 104.034 -4.93329 111.235 -12.1245C118.436 -19.0031 127.358 -22.4424 138.003 -22.4424C149.274 -22.4424 158.509 -18.8468 165.71 -11.6555C172.911 -4.4643 176.511 4.75923 176.511 16.0151C176.511 19.767 176.355 23.2063 176.042 26.3329C175.416 29.7722 174.32 33.8368 172.754 38.5267C171.189 43.2167 168.998 49.1572 166.18 56.3485L141.29 122.945H103.721ZM4.16232 122.945L31.4 18.829L38.9139 54.0035C27.9562 54.0035 18.8769 50.5642 11.6762 43.6856C4.47539 36.8071 0.874999 27.5835 0.875 16.015C0.875001 4.44656 4.47539 -4.9333 11.6762 -12.1245C18.8769 -19.0031 27.7997 -22.4424 38.4443 -22.4424C49.7151 -22.4424 58.9509 -18.8468 66.1516 -11.6555C73.3524 -4.46431 76.9528 4.75922 76.9528 16.015C76.9528 19.767 76.7963 23.2063 76.4832 26.3329C75.857 29.7722 74.7612 33.8368 73.1959 38.5267C71.6305 43.2167 69.4389 49.1572 66.6212 56.3485L41.7316 122.945L4.16232 122.945Z"
-              fill="white"
-            />
-          </svg> */}
-          <p className="text-[10px] lg:text-xs leading-normal">
-            “Exceptional Precision and Quality! Dolanto’s clean room solution
-            exceeded our expectations. Their meticulous attention to detail and
-            unwavering commitment to delivering a clean room environment truly
-            impressed us.”
-          </p>
-          <div className="grid grid-cols-[40px_minmax(100px,_1fr)] ">
-            <div className=" w-full h-full p-2 flex items-start justify-center">
-              <Image
-                width={30}
-                height={30}
-                priority={true}
-                quality={100}
-                src={reviewAboutImg}
-                alt="review person image"
-                className=" object-fill"
-              />
-            </div>
-            <div className="flex flex-col  items-start ">
-              <span className="text-xs">Sarah Johnson</span>
-              <span className="text-xs">Managing Director at L&T</span>
-            </div>
-          </div>
+        <div className="rounded-3xl overflow-hidden xl:col-start-7  p-5 col-span-2  bg-lightBLue  h-[175px] xl:h-[225px]">
+          <AutoSliderCard
+            SliderCard={SliderUserTestimonialCard}
+            slideData={userTestimonialData}
+          />
         </div>
         {careerCard2Data.map((card, i) => (
           <div
             key={card.title}
-            className={`bg-lightBLue p-3 lg:col-start-[${
+            className={`bg-lightBLue p-3 xl:col-start-[${
               (i === 0 && 1) || (i === 1 && 3) || (i === 2 && 5)
-            }] lg:col-span-2 rounded-2xl lg:row-start-1 flex flex-col items-start`}
+            }] xl:col-span-2 rounded-2xl xl:row-start-1 col-span-1  flex flex-col items-start justify-center`}
           >
             <div>
-              <GradientText customTailwindStyle="text-[32px] lg:text-5xl leading-tight">
+              <GradientText customTailwindStyle="text-[32px] xl:text-5xl font-medium leading-tight">
                 {card.title}
               </GradientText>
-              {card.title === "40,000" ? (
-                <GradientText customTailwindStyle="text-[12px] lg:text-[18px] pl-1">
-                  Sq.ft
-                </GradientText>
-              ) : null}
             </div>
-            <GradientText customTailwindStyle="text-[11px] lg:text-2xl">
+            <GradientText customTailwindStyle="text-[11px] xl:text-[22px] font-medium">
               {card.subTitle}
             </GradientText>
-            <p className="text-[10px] lg:text-base font-normal leading-normal">
+            <p className="text-[10px] xl:text-base font-normal leading-normal">
               {card.description}
             </p>
           </div>
         ))}
         <div
-          className={`bg-lightBLue lg:bg-footerColor lg:text-white whitespace-nowrap text-[#002964] lg:col-start-9 lg:col-span-1 text-xs p-3 rounded-2xl flex items-center justify-center`}
+          className={`bg-lightBLue xl:bg-footerColor xl:text-white whitespace-nowrap text-[#002964] xl:col-start-9 xl:col-span-1 text-xs p-3 rounded-2xl flex items-center justify-center`}
         >
-          <p className="lg:-rotate-90">View Openings</p>
+          <p className="xl:-rotate-90">View Openings</p>
         </div>
       </div>
       <div className="w-full pt-5 flex flex-col items-start gap-7">
