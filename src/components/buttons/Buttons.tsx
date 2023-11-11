@@ -14,7 +14,7 @@ export function LinkButton({
 }: Props) {
   return (
     <Link
-      className={`border border-blueMain hover:bg-blueMain hover:text-white transition-colors text-blueMain  px-4 flex  items-center justify-center text-xs font-medium py-2 ${customStyles}`}
+      className={`border border-blueMain hover:bg-blueMain group hover:text-white w-full  transition-all  text-blueMain  p-4 flex  items-center justify-center text-sm font-medium  ${customStyles}`}
       href={link}
     >
       {label}
@@ -41,12 +41,16 @@ export function GradientButtonWrapper({
 export function BlueButtonWrapper({
   children,
   Icon,
+  rounded = "rounded-3xl",
 }: {
   children: React.ReactNode;
   Icon?: React.ReactElement;
+  rounded?: string;
 }) {
   return (
-    <div className="text-blueMain group cursor-pointer transition-colors bg-lightBLue rounded-2xl px-4 flex gap-2 items-center justify-center text-xs font-medium py-3 hover:bg-blueMain hover:text-white">
+    <div
+      className={`text-blueMain group cursor-pointer transition-colors bg-lightBLue ${rounded}  w-fit p-4 flex gap-2 items-center justify-center text-sm font-medium  hover:bg-blueMain hover:text-white`}
+    >
       {children}
       {Icon}
     </div>

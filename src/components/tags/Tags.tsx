@@ -8,7 +8,7 @@ type Props = {
 export function GradientText({ children, customTailwindStyle }: Props) {
   return (
     <span
-      className={`bg-gradient-main  bg-clip-text text-transparent ${customTailwindStyle}`}
+      className={` bg-gradient-main  bg-clip-text text-transparent ${customTailwindStyle}`}
     >
       {children}
     </span>
@@ -23,7 +23,7 @@ export function HeadingTag({
 }) {
   return (
     <p
-      className={`break-words tracking-wider max-sm:text-[1.5rem] text-[3rem] max-[1180px]:text-[2.2rem] max-[1450px]:text-[2.25rem] leading-tight  text-start font-medium ${customTailwindStyle}`}
+      className={`break-words tracking-wider max-sm:text-[1.5rem] text-[3rem] max-[1180px]:text-[2.2rem] max-[1450px]:text-[2.25rem] leading-normal  text-start font-medium ${customTailwindStyle}`}
     >
       {children}
     </p>
