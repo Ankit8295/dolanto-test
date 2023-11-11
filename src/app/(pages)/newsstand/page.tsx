@@ -55,21 +55,6 @@ export default function page() {
         United Kingdom MRC has supported the progression of high end engineering
         industries through innovative design concepts and material technologies.
       </PageDescription>
-      {/* <Link
-        data-aos="fade-up"
-        href={`newsstand/${"newsA"}`}
-        className="text-5xl text-black"
-      >
-        NewA
-      </Link>
-      <Link
-        data-aos="fade-up"
-        href={`newsstand/${"newsB"}`}
-        className="text-5xl text-black"
-      >
-        NewB
-      </Link> */}
-
       <NewsContainer
         RelatedPostSliderCard={RelatedPostSliderCard}
         containerTitle="Latest from Dolanto"
@@ -90,7 +75,7 @@ export default function page() {
       />
       <NewsContainer
         RelatedPostSliderCard={RelatedPostSliderCard}
-        containerTitle="Latest from Dolanto"
+        containerTitle="Blogs & Articles"
         newsData={latestNewsFromDolanto}
         relatedPostData={relatedPostsData}
         slidePerSlider={6}
