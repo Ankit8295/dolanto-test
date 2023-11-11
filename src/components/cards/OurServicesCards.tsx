@@ -20,6 +20,7 @@ export default function OurServicesCards({
         {title}
       </h2>
       <div
+        // data-aos={`${reverse ? "zoom-in-up" : "zoom-in-up"}`}
         className={`w-full justify-center  flex items-center  ${
           reverse
             ? "lg:col-start-2 lg:justify-end"
@@ -29,6 +30,7 @@ export default function OurServicesCards({
         <Image src={image} alt={title} className="object-fill w-full h-full" />
       </div>
       <div
+        // data-aos={`${reverse ? "zoom-in-up" : "zoom-in-up"}`}
         className={` ${
           reverse ? "lg:col-start-1 " : "lg:col-start-2 "
         } flex flex-col lg:gap-3 relative lg:row-start-1 xl:gap-9 lg:p-10 lg:bg-lightBLue lg:rounded-[30px]`}

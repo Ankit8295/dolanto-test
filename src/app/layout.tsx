@@ -4,6 +4,7 @@ import "./globals.css";
 import Provider from "../providers/Provider";
 import { Header } from "@/src/components/header/Header";
 import Footer from "@/src/components/footer/Footer";
+import { AOSInit } from "../utils/aos";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -23,6 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={poppins.className}>
         <Provider>
           <Header />
