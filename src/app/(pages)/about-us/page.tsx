@@ -109,7 +109,7 @@ export default function Page() {
           </GradientText>
         </HeadingTag>
         <Swiper
-          slidesPerView={sliderWidth <= 1024 ? 1 : 4}
+          slidesPerView={sliderWidth <= 1024 ? 1.2 : 4}
           navigation={{
             enabled: true,
             nextEl: ".next",
