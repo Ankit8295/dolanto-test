@@ -28,7 +28,9 @@ export default function SectionB() {
         />
       </div>
       <div
-        data-aos="fade-top"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
         className="max-xl:order-1 col-start-3 col-end-5 row-start-1 row-end-3  flex justify-between flex-col max-xl:gap-6 xl:pl-10"
       >
         <BlueButtonWrapper>About Us</BlueButtonWrapper>

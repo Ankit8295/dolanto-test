@@ -10,9 +10,13 @@ export default function Page() {
         <Image
           src={map}
           alt="map image"
+          data-aos="fade-right"
           className="object-fill w-full max-lg:h-[300px] max-lg:object-cover max-lg:rounded-3xl "
         />
-        <div className="flex justify-between items-center gap-2 flex-wrap">
+        <div
+          data-aos="fade-up"
+          className="flex justify-between items-center gap-2 flex-wrap"
+        >
           <div className="py-2 px-6 max-sm:px-3 flex flex-col items-start gap-1 grow rounded-xl bg-lightBLue">
             <span className="max-sm:text-sm font-light">Address:</span>
             <h2 className="text-[#0045AA] text-xl max-sm:text-base font-medium">
@@ -33,7 +37,10 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="col-span-1 max-lg:row-start-2 row-span-1">
+      <div
+        data-aos="fade-left"
+        className="col-span-1 max-lg:row-start-2 row-span-1"
+      >
         <ContactForm gradient={true} />
       </div>
     </div>

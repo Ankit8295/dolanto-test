@@ -19,7 +19,10 @@ export default function JobDetail({ job }: Props) {
     setOpenJobDetails(!openJobDetails);
   }
   return (
-    <div className="w-full flex flex-col gap-5 max-sm:gap-3 bg-lightBLue px-2 py-3 rounded-3xl">
+    <div
+      data-aos="fade-up"
+      className="w-full flex flex-col gap-5 max-sm:gap-3 bg-lightBLue px-2 py-3 rounded-3xl"
+    >
       <div className="relative flex gap-5 items-center  p-3 max-sm:p-1">
         <div
           onClick={openJobDetailFn}

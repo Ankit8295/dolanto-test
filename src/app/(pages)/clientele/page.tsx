@@ -73,7 +73,6 @@ export default function Page() {
             <span>dairy</span>
           </div>
         </div>
-        {/* <div className="w-full grid grid-cols-4 gap-y-5 gap-x-5 max-md:gap-x-0 max-[1200px]:grid-cols-2 max-md:grid-cols-1"> */}
         <div className="w-full flex items-start flex-wrap max-lg:flex-col justify-between gap-10 max-lg:gap-10">
           {products.map((product) => (
             <ClientEleCard key={product.id} card={product} />

@@ -22,7 +22,9 @@ export default function SectionC({}: Props) {
     <div className="w-full  flex max-lg:flex-col max-lg:gap-10">
       <div className="w-1/2 pr-5 max-lg:pr-0 max-lg:w-full flex items-start  flex-col gap-5">
         <div
-          data-aos="fade-top"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-offset="0"
           className="w-full flex flex-col items-start gap-2"
         >
           <BlueButtonWrapper>Products & Services</BlueButtonWrapper>

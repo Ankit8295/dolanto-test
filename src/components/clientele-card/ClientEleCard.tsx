@@ -16,7 +16,10 @@ type Props = {
 
 export default function ClientEleCard({ card }: Props) {
   return (
-    <div className="w-[285px] max-lg:w-full p-5 min-h-[250px] flex flex-col justify-between items-center  bg-lightBLue h-full">
+    <div
+      data-aos="fade-up"
+      className="w-[285px] max-lg:w-full p-5 min-h-[250px] flex flex-col justify-between items-center  bg-lightBLue h-full"
+    >
       <div className="w-full grow  flex items-center justify-center">
         <Image
           width={130}

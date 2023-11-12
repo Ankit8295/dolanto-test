@@ -15,7 +15,10 @@ export default function OurServicesCards({
   reverse,
 }: Props) {
   return (
-    <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10  grid-rows-[auto] lg:grid-rows-1 justify-items-center lg:justify-items-start gap-y-5 lg:gap-y-0">
+    <div
+      data-aos="fade-up"
+      className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10  grid-rows-[auto] lg:grid-rows-1 justify-items-center lg:justify-items-start gap-y-5 lg:gap-y-0"
+    >
       <h2 className="lg:hidden row-span-1 row-start-1 bg-footerColor rounded-xl py-2 px-4 text-white text-sm  text-center w-fit">
         {title}
       </h2>

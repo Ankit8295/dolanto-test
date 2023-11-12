@@ -7,7 +7,10 @@ type Props = {
 
 export default function AboutUsBoardSlide({ image }: Props) {
   return (
-    <div className={`h-full w-full  flex items-center justify-center`}>
+    <div
+      data-aos="fade-up"
+      className={`h-full w-full  flex items-center justify-center`}
+    >
       <Image
         src={image}
         alt="empA"

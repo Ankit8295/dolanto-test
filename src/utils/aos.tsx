@@ -10,7 +10,8 @@ export const AOSInit = () => {
       easing: "ease-out",
       duration: 700,
       delay: 0,
-      anchorPlacement: "center-bottom",
+      anchorPlacement: "top-bottom",
+      offset: 0,
     });
   }, []);
 

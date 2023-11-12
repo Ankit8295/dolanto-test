@@ -10,7 +10,9 @@ export default function HeroSection() {
   return (
     <div className="grid grid-col-2 lg:grid-cols-4 gap-7 max-sm:gap-5 overflow-hidden pt-5">
       <div
-        data-aos="fade-top"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
         className="col-span-2 flex justify-between flex-col pb-4 max-sm:pb-0"
       >
         <HeadingTag>

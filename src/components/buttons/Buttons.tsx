@@ -31,7 +31,7 @@ export function GradientButtonWrapper({
 }) {
   return (
     <button
-      className={`bg-gradient-main rounded-full text-sm py-3 px-4 text-white ${customStyles}`}
+      className={`bg-gradient-main rounded-full  py-3 px-4 text-white ${customStyles}`}
     >
       {children}
     </button>

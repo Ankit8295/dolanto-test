@@ -23,19 +23,19 @@ export function Header() {
             <Image
               src={logo}
               alt="logo_dolanto"
-              height={40}
-              width={90}
+              height={50}
+              width={100}
               className="ml-3 max-sm:ml-0"
             />
           </Link>
         </div>
         <Link href={routes.contact_us}>
-          <GradientButtonWrapper customStyles="max-sm:hidden">
+          <GradientButtonWrapper customStyles="max-sm:hidden font-medium text-lg leading-none ">
             Contact Us
           </GradientButtonWrapper>
         </Link>
         {headerActive && (
-          <div className="bg-white shadow-outset flex flex-col gap-2 px-7 py-4 rounded-2xl absolute top-[100%] left-0 max-sm:left-full max-sm:-translate-x-full z-50">
+          <div className="bg-white shadow-outset flex flex-col gap-2 px-7 py-4  rounded-2xl absolute top-[100%] left-0 max-sm:left-full max-sm:-translate-x-full z-50">
             <Link
               href={routes.home}
               onClick={() => {

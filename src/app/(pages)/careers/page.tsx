@@ -12,7 +12,12 @@ export default function page() {
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="grid grid-cols-2 gap-x-8  max-[1200px]:gap-x-0 max-[1200px]:gap-y-8 max-[1200px]:grid-cols-1 max-[1200px]:grid-rows-[auto]">
-        <div className="flex flex-col max-[1200px]:gap-8 justify-between">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-offset="0"
+          className="flex flex-col max-[1200px]:gap-8 justify-between"
+        >
           <HeadingTag>
             We are
             <GradientText> Gathering</GradientText> a team of{" "}
@@ -27,15 +32,18 @@ export default function page() {
             ))}
           </div>
         </div>
-        <Image
-          src={careersImg}
-          alt="career image"
-          priority={true}
-          quality={100}
-          className="object-center rounded-xl w-full h-full  max-[1200px]:w-full"
-        />
+        <div className="w-full h-full" data-aos="fade-left">
+          <Image
+            src={careersImg}
+            alt="career image"
+            priority={true}
+            quality={100}
+            className="object-center rounded-xl w-full h-full  max-[1200px]:w-full"
+          />
+        </div>
       </div>
       <div
+        data-aos="fade-up"
         className={`grid grid-cols-2 xl:grid-cols-9 xl:grid-rows-1  gap-y-2 gap-x-2`}
       >
         <div className="rounded-3xl overflow-hidden xl:col-start-7  p-5 col-span-2  bg-lightBLue  h-[175px] xl:h-[225px]">

@@ -44,13 +44,17 @@ export default function Footer({}: Props) {
                 <p className="text-sm font-medium text-[#0045AA] leading-6">
                   Phone:{" "}
                 </p>
-                <span>{aboutDolantoContact.phone}</span>
+                <Link href={`tel:${aboutDolantoContact.phone}`}>
+                  {aboutDolantoContact.phone}
+                </Link>
               </div>
               <div>
                 <p className="text-sm font-medium text-[#0045AA] leading-6">
                   Support:{" "}
                 </p>
-                <span>{aboutDolantoContact.email}</span>
+                <Link href={`mailto:${aboutDolantoContact.email}`}>
+                  {aboutDolantoContact.email}
+                </Link>
               </div>
             </div>
             <div className="col-span-1 row-span-2 col-start-2 max-sm:row-start-2  max-sm:row-span-1 max-sm:col-start-1 max-sm:items-start text-white flex flex-col items-end gap-4 font-medium">

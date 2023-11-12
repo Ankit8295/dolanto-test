@@ -45,7 +45,10 @@ export default function Page() {
         industries while meeting the most stringent regulatory requirements. We
         are ISO 9001:2015 certified.
       </AboutUsCards>
-      <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto ">
+      <div
+        data-aos="fade-up"
+        className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto "
+      >
         <Swiper
           slidesPerView={sliderWidth <= 1024 ? 1 : 3}
           navigation={{
