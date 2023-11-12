@@ -4,6 +4,8 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from "../../icons/Icons";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import LoadingSvg from "../../Loader/LoadingSvg";
+import { toast } from "react-toastify";
 
 type FormDataType = {
   name: string;
@@ -23,19 +25,25 @@ type FormDataType = {
 
 export default function ContactForm({ gradient }: { gradient?: boolean }) {
   const [file, setFile] = useState<File | null>(null);
+  const [sending, setSending] = useState<boolean>(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     // resolver: yupResolver(formValidationSchema),
   });
 
   const submitHandler = handleSubmit((data) => {
+    setSending(true);
     try {
-      console.log(data);
+      toast.success("Submitted Successfully");
+      reset();
+      setSending(false);
     } catch (err) {
       console.log(err);
+      setSending(false);
     }
   });
 
@@ -49,7 +57,7 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
         <FacebookIcon />
         <InstagramIcon />
       </div>
-      <form onSubmit={submitHandler} className="w-full flex flex-col gap-4">
+      <form onSubmit={submitHandler} className="w-full flex flex-col gap-5">
         <input
           type="text"
           placeholder="Full Name"
@@ -89,11 +97,12 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
         </label>
         <button
           type="submit"
-          className={`w-full ${
+          className={`w-full flex items-center text-xl justify-center gap-2 ${
             gradient ? "bg-gradient-main" : "bg-footerColor"
           } text-white py-2 rounded-xl`}
         >
-          Send
+          {sending && <LoadingSvg />}
+          {sending ? "Sending" : "Send"}
         </button>
       </form>
     </div>

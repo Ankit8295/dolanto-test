@@ -34,6 +34,31 @@ const config: Config = {
         half: "50% 100%",
         full: "100%",
       },
+      keyframes: {
+        rotate: {
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+        dash: {
+          "0%": {
+            strokeDasharray: "1, 200",
+            strokeDashoffset: "0",
+          },
+          "50%": {
+            strokeDasharray: "90, 200",
+            strokeDashoffset: "-35px",
+          },
+
+          "100%": {
+            strokeDashoffset: "-125px",
+          },
+        },
+      },
+      animation: {
+        dashOut: "dash 1.5s ease-in-out infinite",
+        rotateOut: "rotate 2s linear infinite",
+      },
     },
   },
   plugins: [],

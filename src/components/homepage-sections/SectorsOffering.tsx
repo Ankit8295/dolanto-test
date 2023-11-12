@@ -4,7 +4,6 @@ import Image from "next/image";
 import { GradientText, HeadingTag } from "../tags/Tags";
 import { offeringSectors } from "@/src/constants/homepage";
 import { useState } from "react";
-import { toast } from "react-toastify";
 
 type Props = {};
 
@@ -65,7 +64,6 @@ export default function SectorsOffering({}: Props) {
       </div>
       <button
         onClick={() => {
-          toast.success("Submitted Successfully");
           setShowRemaining(!showRemaining);
         }}
         className="px-4 py-3 rounded-lg font-medium bg-lightBLue"
