@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import FaqList from "@/src/components/faqList/FaqList";
@@ -11,6 +10,8 @@ import HeroSection from "@/src/components/homepage-sections/HeroSection";
 import SectionB from "@/src/components/homepage-sections/SectionB";
 import AutoSliderCard from "../components/slider/AutoSliderCard";
 import SliderImageComponent from "../components/slider/slider-comp/SliderImageComponent";
+import SectorsOffering from "../components/homepage-sections/SectorsOffering";
+import CardsSection from "../components/homepage-sections/DynamicCardsSection";
 
 export default function Page() {
   return (
@@ -18,28 +19,8 @@ export default function Page() {
       <HeroSection />
       <SectionB />
       <SectionC />
-      <div
-        data-aos="fade-top"
-        className="flex justify-center items-center w-full"
-      >
-        <HeadingTag>We Provided offerings in different sectors</HeadingTag>
-      </div>
-      <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
-        {offeringSectors.map((card) => (
-          <div key={card.title} className="relative rounded-3xl h-full w-full">
-            <span className="capitalize absolute left-[4%] top-[8%] bg-white md:py-2 md:px-4 md:rounded-lg px-2 py-1 text-center min-w-[100px] rounded-full">
-              {card.title}
-            </span>
-            <Image
-              src={card.image}
-              width={400}
-              height={200}
-              alt={card.title}
-              className="h-full w-full"
-            />
-          </div>
-        ))}
-      </div>
+      <SectorsOffering />
+      <CardsSection />
       <div className="w-full flex justify-between max-lg:flex-col-reverse max-lg:gap-10">
         <div className="w-[49%] max-lg:w-full rounded-xl bg-lightBLue p-5 flex flex-col items-start gap-5">
           <div className="bg-darkBlue text-white rounded-xl py-[6px] px-3 text-sm font-medium">

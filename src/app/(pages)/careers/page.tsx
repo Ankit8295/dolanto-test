@@ -46,7 +46,7 @@ export default function page() {
         </div>
         {careerCard2Data.map((card, i) => (
           <div
-            key={card.title}
+            key={i}
             className={`bg-lightBLue p-3 xl:col-start-[${
               (i === 0 && 1) || (i === 1 && 3) || (i === 2 && 5)
             }] xl:col-span-2 rounded-2xl xl:row-start-1 col-span-1  flex flex-col items-start justify-center`}

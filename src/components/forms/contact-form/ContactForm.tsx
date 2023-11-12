@@ -1,9 +1,44 @@
 "use client";
 import { ChangeEvent, useState } from "react";
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "../../icons/Icons";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+type FormDataType = {
+  name: string;
+  companyName: string;
+  email: string;
+  message: string;
+  file?: File;
+};
+
+// const formValidationSchema = yup.object().shape({
+//   name: yup.string().required("Name is required"),
+//   companyName: yup.string().required("Company name is required"),
+//   email: yup.string().email("Invalid email").required("Email is required"),
+//   message: yup.string().required("Message is required"),
+//   file: yup.mixed().notRequired(),
+// });
 
 export default function ContactForm({ gradient }: { gradient?: boolean }) {
   const [file, setFile] = useState<File | null>(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    // resolver: yupResolver(formValidationSchema),
+  });
+
+  const submitHandler = handleSubmit((data) => {
+    try {
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
   return (
     <div className="relative bg-lightBLue w-full rounded-3xl flex flex-col items-center gap-4 h-full  py-5 px-6">
       <span className="p-3 absolute top-0 left-0 rounded-br-2xl bg-white before:absolute before:top-[0%] before:right-[0%] before:translate-x-[73%] before:bg-half before:h-[7px] before:w-[30px] before:bg-no-repeat before:bg-gradient-radial-right after:content-[''] after:absolute after:top-[100%] after:left-[0%] after:translate-x-[-27%] after:bg-half after:h-[7px] after:w-[30px] after:bg-no-repeat after:bg-gradient-radial-right ">
@@ -14,33 +49,35 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
         <FacebookIcon />
         <InstagramIcon />
       </div>
-      <form
-        onSubmit={() => console.log("submitted")}
-        className="w-full flex flex-col gap-4"
-      >
+      <form onSubmit={submitHandler} className="w-full flex flex-col gap-4">
         <input
           type="text"
           placeholder="Full Name"
           className="bg-white p-2 rounded-lg"
+          {...register("name", { required: true })}
         />
         <input
           type="text"
           placeholder="Company Name"
           className="bg-white p-2 rounded-lg"
+          {...register("companyName", { required: true })}
         />
         <input
           type="text"
           placeholder="Email Name"
           className="bg-white p-2 rounded-lg"
+          {...register("email", { required: true })}
         />
         <textarea
           placeholder="Message"
           className="resize-none bg-white p-2 rounded-lg"
           rows={4}
+          {...register("message", { required: true })}
         />
         <label className="w-full p-2 rounded-lg bg-white">
           <input
             type="file"
+            {...register("file")}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setFile(e.target.files ? e.target.files[0] : null)
             }

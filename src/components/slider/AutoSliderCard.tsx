@@ -36,7 +36,7 @@ export default function AutoSliderCard({
       >
         {slideData.map((data: any, i: number) => (
           <SwiperSlide
-            key={i}
+            key={i + data.length}
             className={` !flex items-center justify-center max-w-[100%]`}
           >
             <SliderCard data={data} />
@@ -58,6 +58,7 @@ export default function AutoSliderCard({
             ></div>
             {i < slideData.length - 1 && (
               <div
+                key={i + 10}
                 className={` ${!vertical ? "h-10 w-[2px]" : "w-10 h-[2px]"} ${
                   activeIndex >= i + 1 ? "opacity-100" : "opacity-25"
                 }  bg-footerColor  transition`}

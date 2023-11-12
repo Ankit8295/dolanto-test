@@ -44,7 +44,7 @@ export default function HeroSection() {
           key={cards.title}
         >
           <span
-            className={` whitespace-nowrap px-4 max-sm:px-2 text-xs max-sm:text-[10px] font-medium bg-white z-40 py-2 w-fit absolute ${
+            className={` whitespace-nowrap px-4 max-sm:px-2 text-lg leading-none max-sm:text-[10px] font-medium bg-white z-40 py-2 w-fit absolute ${
               index === 1 || index === 2
                 ? ` top-0 right-0  rounded-bl-2xl after:absolute after:w-full after:h-2/3  after:top-0 after:rounded-tr-2xl after:left-[-100%] after:shadow-[3px_-8px_white]
                   before:absolute before:w-1/2 before:h-full  before:top-[100%] before:rounded-tr-2xl before:right-0 before:shadow-[3px_-8px_white] before:z-10 `

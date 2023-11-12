@@ -25,7 +25,7 @@ export default function Footer({}: Props) {
         className={`relative w-[95%] max-w-[1750px] max-sm:w-full mx-auto py-6 max-sm:pb-0 grid ${
           wide ? "grid-cols-2" : "grid-cols-3"
         } gap-5 grid-rows-1 max-lg:grid-cols-1 ${
-          wide ? "" : "max-lg:grid-rows-2"
+          wide ? "" : "max-lg:grid-rows-[auto]"
         }`}
       >
         <div className="col-span-2 max-lg:row-start-2 max-sm:col-span-1 max-lg:rounded-none bg-footerColor w-full max-lg:w-full flex flex-col justify-between p-10 max-sm:p-5 rounded-3xl h-full">
@@ -35,15 +35,21 @@ export default function Footer({}: Props) {
             </div>
             <div className="row-start-2 max-sm:col-span-1 max-sm:w-full max-sm:row-start-3 text-white flex flex-col items-start gap-3 font-medium">
               <div>
-                <p className="text-xs text-[#0045AA] leading-6">Address: </p>
+                <p className="text-sm font-medium text-[#0045AA] leading-6">
+                  Address:{" "}
+                </p>
                 <span>{aboutDolantoContact.address}</span>
               </div>
               <div>
-                <p className="text-xs text-[#0045AA] leading-6">Phone: </p>
+                <p className="text-sm font-medium text-[#0045AA] leading-6">
+                  Phone:{" "}
+                </p>
                 <span>{aboutDolantoContact.phone}</span>
               </div>
               <div>
-                <p className="text-xs text-[#0045AA] leading-6">Support: </p>
+                <p className="text-sm font-medium text-[#0045AA] leading-6">
+                  Support:{" "}
+                </p>
                 <span>{aboutDolantoContact.email}</span>
               </div>
             </div>
@@ -55,7 +61,6 @@ export default function Footer({}: Props) {
               <Link href={routes.clientele}>Clientele</Link>
               <Link href={routes.newsstand}>Newsstand</Link>
               <Link href={routes.careers}>Careers</Link>
-              <Link href={routes.contact_us}>Contact Us</Link>
             </div>
           </div>
           <div className="flex w-full items-center justify-between text-white max-sm:flex-col-reverse max-sm:gap-3 max-sm:items-start">

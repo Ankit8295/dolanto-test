@@ -45,7 +45,7 @@ export default function SectionB() {
           <LinkButton
             customStyles="rounded-full"
             label={"Contact Us"}
-            link="/"
+            link={routes.contact_us}
           />
           <BlueButtonWrapper
             rounded="rounded-full"
@@ -58,6 +58,7 @@ export default function SectionB() {
 
       <div
         data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
         className="max-xl:order-3 col-start-2 col-end-5 row-start-3 row-end-4 xl:flex gap-5 grid grid-cols-2  bg-white xl:pl-5 xl:pt-5 rounded-t-3xl"
       >
         {homeAboutCards.map((textCard, index) => (
