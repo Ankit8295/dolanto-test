@@ -15,7 +15,7 @@ export function Header() {
   const dispatch = useStateDispatch();
 
   return (
-    <header className="w-full bg-white sticky z-50 top-0">
+    <header data-aos="fade-down" className="w-full bg-white sticky z-50 top-0">
       <div className="w-[95%] relative max-w-[1750px] mx-auto bg-white  flex items-center max-sm:flex-row-reverse justify-between gap-2 py-3">
         <HamburgerMenu />
         <div className="grow  bg-lightBLue max-sm:bg-white max-sm:p-0 rounded-full p-3">

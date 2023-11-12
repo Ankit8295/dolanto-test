@@ -3,12 +3,19 @@ import React from "react";
 type Props = {
   children: React.ReactNode;
   customTailwindStyle?: string;
+  showGradient?: boolean;
 };
 
-export function GradientText({ children, customTailwindStyle }: Props) {
+export function GradientText({
+  children,
+  customTailwindStyle,
+  showGradient = true,
+}: Props) {
   return (
     <span
-      className={` bg-gradient-main  bg-clip-text text-transparent ${customTailwindStyle}`}
+      className={` ${
+        showGradient ? "bg-gradient-main  bg-clip-text text-transparent" : ""
+      } ${customTailwindStyle}`}
     >
       {children}
     </span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { GradientText } from "../tags/Tags";
 
 type Props = {
   qs: string;
@@ -21,13 +22,12 @@ export default function FaqList({ ans, qs }: Props) {
           onClick={handleOpen}
           className="grid grid-cols-[1fr_30px] items-center cursor-pointer"
         >
-          <p
-            className={`p-2  from-black to-black ${
-              open ? "bg-gradient-main" : "bg-gradient-to-r"
-            } bg-clip-text text-transparent`}
+          <GradientText
+            showGradient={open === true ? true : false}
+            customTailwindStyle="p-2 font-medium"
           >
             {qs}
-          </p>
+          </GradientText>
           {!open ? (
             <div className="flex items-center justify-center">
               <svg
@@ -94,7 +94,7 @@ export default function FaqList({ ans, qs }: Props) {
           <p
             className={`overflow-hidden max-sm:text-sm ${
               open ? "opacity-100" : "opacity-0"
-            }   transition duration-300`}
+            }   transition duration-300 font-light`}
           >
             {ans}
           </p>
