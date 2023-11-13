@@ -23,7 +23,7 @@ export function Header() {
             <Image
               src={logo}
               alt="logo_dolanto"
-              height={50}
+              height={28}
               width={100}
               className="ml-3 max-sm:ml-0"
             />
