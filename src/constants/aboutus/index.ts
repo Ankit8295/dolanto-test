@@ -6,34 +6,76 @@ import foundingAImg from "@/public/media/about-us/foundingA.png";
 
 export const teamDetails = [
   {
+    id: 1,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeAImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
   {
+    id: 2,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeBImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
   {
+    id: 3,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeCImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
   {
+    id: 4,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeDImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
   {
+    id: 5,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeAImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
   {
+    id: 6,
     name: "Allison Tyler",
     designation: "Team Manager",
     image: employeeBImg,
+    socialLinks: {
+      linkedin: "",
+      facebook: "",
+      twitter: "",
+      instagram: "",
+    },
   },
 ];
 

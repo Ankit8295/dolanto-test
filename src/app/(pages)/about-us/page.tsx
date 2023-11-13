@@ -9,24 +9,9 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AboutUsBoardSlide from "@/src/components/cards/AboutUsBoardSlide";
 import { journeyDetails, teamDetails } from "@/src/constants/aboutus";
-import { useEffect, useState } from "react";
 import AboutUsJourneySlide from "@/src/components/cards/AboutUsJourneySlide";
 
 export default function Page() {
-  const [sliderWidth, setSliderWidth] = useState<number>(0);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setSliderWidth(window.innerWidth);
-
-      const handleResize = () => {
-        setSliderWidth(window.innerWidth);
-      };
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
   return (
     <>
       <PageDescription title="ABOUT US">
@@ -50,27 +35,30 @@ export default function Page() {
         className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto "
       >
         <Swiper
-          slidesPerView={sliderWidth <= 1024 ? 1 : 3}
+          slidesPerView={1}
           navigation={{
             enabled: true,
             nextEl: ".nextA",
             prevEl: ".prevA",
           }}
-          spaceBetween={sliderWidth <= 1024 ? 5 : 0}
+          spaceBetween={0}
           modules={[Navigation]}
-          className="mySwiper w-[94%] max-sm:w-[85%] mx-auto mt-14"
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper w-[93%] max-md:w-[90%] max-lg:w-[91%] max-sm:w-[85%] mx-auto mt-14"
         >
           {journeyDetails.map((journey, index) => (
             <SwiperSlide
-              key={journey.year}
+              key={index}
               className={` !flex items-center justify-center max-w-[100%]`}
             >
-              <AboutUsJourneySlide
-                alignTop={
-                  sliderWidth <= 1024 ? true : index % 2 === 0 ? true : false
-                }
-                data={journey}
-              />
+              <AboutUsJourneySlide index={index} data={journey} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -112,7 +100,7 @@ export default function Page() {
           </GradientText>
         </HeadingTag>
         <Swiper
-          slidesPerView={sliderWidth <= 1024 ? 1.2 : 4}
+          slidesPerView={1.2}
           navigation={{
             enabled: true,
             nextEl: ".next",
@@ -121,19 +109,18 @@ export default function Page() {
           modules={[Navigation]}
           spaceBetween={20}
           className="mySwiper w-full"
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
         >
-          {teamDetails.map((teamMember, index) => (
-            <SwiperSlide
-              key={teamMember.name}
-              className={`max-2xl:min-h-[350px] max-2xl:max-h-[350px] min-h-[550px] max-h-[550px] !flex ${
-                sliderWidth < 1024
-                  ? "!items-center"
-                  : index % 2 === 0
-                  ? "!items-start"
-                  : "!items-end"
-              } justify-center `}
-            >
-              <AboutUsBoardSlide image={teamMember.image} />
+          {teamDetails.map((teamMemberDetails, index) => (
+            <SwiperSlide key={teamMemberDetails.id}>
+              <AboutUsBoardSlide index={index} data={teamMemberDetails} />
             </SwiperSlide>
           ))}
         </Swiper>

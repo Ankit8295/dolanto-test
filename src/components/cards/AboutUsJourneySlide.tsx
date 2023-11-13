@@ -10,15 +10,17 @@ type JourneyData = {
 };
 type Props = {
   data: JourneyData;
-  alignTop: boolean;
+  index: number;
 };
-export default function AboutUsJourneySlide({ data, alignTop }: Props) {
+export default function AboutUsJourneySlide({ data, index }: Props) {
   return (
     <div
       className={`h-full w-full  grid grid-cols-1 grid-rows-[275px_75px_275px] max-lg:grid-rows-[225px_75px_225px]`}
     >
       <div
-        className={`${alignTop ? "row-start-1" : "row-start-3"} w-full h-full `}
+        className={`${
+          index % 2 === 0 ? "row-start-1" : "row-start-3"
+        } w-full h-full `}
       >
         <Image
           src={data.image}
@@ -34,7 +36,9 @@ export default function AboutUsJourneySlide({ data, alignTop }: Props) {
       </div>
       <div
         className={`flex flex-col items-center  gap-3 max-lg:gap-2 ${
-          alignTop ? "row-start-3 justify-start" : "row-start-1 justify-end"
+          index % 2 === 0
+            ? "row-start-3 justify-start"
+            : "row-start-1 justify-end"
         } `}
       >
         <p className="font-semibold text-[1.75rem] max-xl:text-2xl text-[#001942]">

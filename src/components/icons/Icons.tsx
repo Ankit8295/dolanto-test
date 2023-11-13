@@ -37,12 +37,15 @@ export function DownloadButtonIcon() {
     </svg>
   );
 }
-export function LinkedinIcon() {
+export function LinkedinIcon({ opacity }: { opacity?: number }) {
   return (
     <svg
       width="21"
       height="20"
       viewBox="0 0 21 20"
+      style={{
+        opacity: opacity,
+      }}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -53,13 +56,16 @@ export function LinkedinIcon() {
     </svg>
   );
 }
-export function FacebookIcon() {
+export function FacebookIcon({ opacity }: { opacity?: number }) {
   return (
     <svg
       width="11"
       height="20"
       viewBox="0 0 11 20"
       fill="none"
+      style={{
+        opacity: opacity,
+      }}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -69,12 +75,15 @@ export function FacebookIcon() {
     </svg>
   );
 }
-export function InstagramIcon() {
+export function InstagramIcon({ opacity }: { opacity?: number }) {
   return (
     <svg
       width="21"
       height="20"
       viewBox="0 0 21 20"
+      style={{
+        opacity: opacity,
+      }}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
