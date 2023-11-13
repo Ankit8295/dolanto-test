@@ -25,7 +25,7 @@ export default function page({}: Props) {
           objectFit="cover"
           objectPosition="center"
           data-aos="fade-up"
-          className="h-full w-full"
+          className="h-full w-full rounded-3xl"
         />
       </div>
       <div className="flex items-center justify-center flex-col gap-1">
