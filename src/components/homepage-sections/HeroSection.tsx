@@ -61,7 +61,10 @@ export default function HeroSection() {
             src={cards.imgSrc}
             alt={cards.title}
             priority={true}
-            className="object-cover w-full h-full rounded-3xl"
+            placeholder="blur"
+            objectFit="cover"
+            objectPosition="center"
+            className=" w-full h-full rounded-3xl"
           />
           <div
             className={`flex flex-col max-lg:hidden  ${

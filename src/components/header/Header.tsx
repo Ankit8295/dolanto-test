@@ -25,6 +25,8 @@ export function Header() {
               alt="logo_dolanto"
               height={28}
               width={100}
+              loading="lazy"
+              placeholder="blur"
               className="ml-3 max-sm:ml-0"
             />
           </Link>

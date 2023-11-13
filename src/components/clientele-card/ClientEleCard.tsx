@@ -26,7 +26,10 @@ export default function ClientEleCard({ card }: Props) {
           height={130}
           alt={card.id}
           src={card.image}
-          className="object-cover rounded-xl"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
         />
       </div>
       <div className="py-2 rounded-xl text-sm font-medium bg-white px-5">

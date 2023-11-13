@@ -32,14 +32,16 @@ export default function page() {
             ))}
           </div>
         </div>
-        <div className="w-full h-full" data-aos="fade-left">
-          <Image
-            src={careersImg}
-            alt="career image"
-            priority={true}
-            className="object-center rounded-xl w-full h-full  max-[1200px]:w-full"
-          />
-        </div>
+        <Image
+          src={careersImg}
+          alt="career image"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
+          data-aos="fade-left"
+          className="h-full w-full"
+        />
       </div>
       <div
         data-aos="fade-up"

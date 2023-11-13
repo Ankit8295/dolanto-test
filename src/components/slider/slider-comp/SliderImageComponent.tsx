@@ -6,5 +6,15 @@ type Props = {
 };
 
 export default function SliderImageComponent({ data }: Props) {
-  return <Image src={data} alt={""} className="object-fill self-center" />;
+  return (
+    <Image
+      src={data}
+      alt={""}
+      loading="lazy"
+      placeholder="blur"
+      objectFit="cover"
+      objectPosition="center"
+      className=" w-full h-full self-center"
+    />
+  );
 }

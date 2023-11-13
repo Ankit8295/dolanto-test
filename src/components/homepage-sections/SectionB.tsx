@@ -20,16 +20,18 @@ export default function SectionB() {
       >
         <Image
           src={aboutImg}
-          height={500}
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
           alt={"dolanto about image"}
-          className="object-cover h-full w-full max-h-[800px]  rounded-3xl"
+          className="h-full w-full rounded-3xl"
         />
       </div>
       <div
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-offset="0"
-        className="max-xl:order-1 col-start-3 col-end-5 row-start-1 row-end-3  flex justify-between flex-col max-xl:gap-6 xl:pl-10"
+        className="max-xl:order-1 col-start-3 col-end-5 row-start-1 row-end-3  flex gap-6 flex-col max-xl:gap-4 xl:pl-10"
       >
         <BlueButtonWrapper>About Us</BlueButtonWrapper>
         <HeadingTag>

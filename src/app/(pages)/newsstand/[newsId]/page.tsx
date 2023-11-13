@@ -17,13 +17,16 @@ export default function page({}: Props) {
           <span>|</span>
           <span>{data.readTime}</span>
         </div>
-        <div data-aos="fade-up" className="w-full">
-          <Image
-            src={data.mainImage}
-            alt="main"
-            className=" w-full h-[90vh] max-lg:h-auto max-lg:object-contain"
-          />
-        </div>
+        <Image
+          src={data.mainImage}
+          alt="main"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
+          data-aos="fade-up"
+          className="h-full w-full"
+        />
       </div>
       <div className="flex items-center justify-center flex-col gap-1">
         <Image
@@ -31,7 +34,10 @@ export default function page({}: Props) {
           width={50}
           height={50}
           alt="author"
-          className="object-fill"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
         />
         <span>{data.author.name}</span>
         <span>{data.author.designation}</span>
@@ -45,29 +51,31 @@ export default function page({}: Props) {
       <span className="text-2xl max-lg:text-sm max-lg:text-center font-light text-[#183B56]">
         {data.detail.description}
       </span>
-      <ol className="text-2xl max-lg:text-sm max-lg:text-center max-sm:list-none font-light text-[#183B56] flex flex-col gap-10 max-lg:gap-6 list-disc pl-5">
+      <ol className="text-2xl max-lg:text-sm max-lg:text-center max-sm:list-none max-sm:pl-0 font-light text-[#183B56] flex flex-col gap-10 max-lg:gap-6 list-disc pl-5 ">
         {data.detail.points
           .filter((_, i) => i < 3)
           .map((point, i) => (
             <li key={i}>{point}</li>
           ))}
       </ol>
-      <div className="w-full grid grid-cols-2 gap-10 max-lg:grid-cols-1 grid-rows-[auto]">
+      <div className="w-full h-full flex justify-between 2xl:justify-evenly max-xl:flex-col max-xl:items-center items-start gap-10">
         {data.detail.images.map((img, i) => (
-          <div
-            className="w-full"
+          <Image
             key={i}
+            src={img}
+            alt={"images"}
+            loading="lazy"
+            placeholder="blur"
+            objectFit="cover"
+            height={550}
+            width={550}
+            objectPosition="center"
+            className=" rounded-3xl max-xl:w-full"
             data-aos={i === 0 ? "fade-right" : "fade-left"}
-          >
-            <Image
-              src={img}
-              alt={""}
-              className="h-[85vh] object-cover max-lg:h-[70vh] rounded-3xl max-lg:w-full max-lg:object-cover"
-            />
-          </div>
+          />
         ))}
       </div>
-      <ol className="text-2xl max-lg:text-sm max-lg:text-center font-light text-[#183B56] flex flex-col gap-10 max-lg:gap-6 list-disc max-sm:list-none pl-5">
+      <ol className="text-2xl max-lg:text-sm max-lg:text-center font-light text-[#183B56] flex flex-col gap-10 max-lg:gap-6 list-disc max-sm:list-none max-sm:pl-0 pl-5">
         {data.detail.points
           .filter((_, i) => i > 2)
           .map((point, i) => (

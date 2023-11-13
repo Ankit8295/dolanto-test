@@ -29,7 +29,15 @@ export default function AboutUsCards({
             : "lg:col-start-1 lg:justify-start"
         } lg:row-start-1`}
       >
-        <Image src={image} alt={title} className="object-fill w-full h-full" />
+        <Image
+          src={image}
+          alt={title}
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
+          className="w-full h-full"
+        />
       </div>
       <div
         className={` ${

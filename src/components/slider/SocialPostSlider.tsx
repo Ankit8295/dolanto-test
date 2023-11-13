@@ -25,7 +25,10 @@ const SocialPostSliderCard: React.FC<{
         alt="a"
         width={250}
         height={300}
-        className="object-fill rounded-3xl"
+        loading="lazy"
+        placeholder="blur"
+        objectFit="cover"
+        objectPosition="center"
       />
       <span className="text-sm w-[80%] mx-auto text-center font-medium">
         {data.title}

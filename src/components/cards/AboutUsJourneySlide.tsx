@@ -20,12 +20,16 @@ export default function AboutUsJourneySlide({ data, index }: Props) {
       <div
         className={`${
           index % 2 === 0 ? "row-start-1" : "row-start-3"
-        } w-full h-full `}
+        } w-[80%] mx-auto h-full max-lg:row-span-1`}
       >
         <Image
           src={data.image}
           alt="empA"
-          className="object-cover rounded-3xl w-full h-full"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded-3xl w-full h-full"
         />
       </div>
       <div className=" w-full row-start-2 flex items-center justify-center pt-5 flex-col gap-3">
@@ -37,9 +41,9 @@ export default function AboutUsJourneySlide({ data, index }: Props) {
       <div
         className={`flex flex-col items-center  gap-3 max-lg:gap-2 ${
           index % 2 === 0
-            ? "row-start-3 justify-start"
+            ? "row-start-3 justify-start "
             : "row-start-1 justify-end"
-        } `}
+        } max-lg:row-span-3 max-lg:justify-start`}
       >
         <p className="font-semibold text-[1.75rem] max-xl:text-2xl text-[#001942]">
           {data.title}

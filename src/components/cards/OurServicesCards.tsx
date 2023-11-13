@@ -23,17 +23,23 @@ export default function OurServicesCards({
         {title}
       </h2>
       <div
-        // data-aos={`${reverse ? "zoom-in-up" : "zoom-in-up"}`}
         className={`w-full justify-center  flex items-center  ${
           reverse
             ? "lg:col-start-2 lg:justify-end"
             : "lg:col-start-1 lg:justify-start"
         } lg:row-start-1`}
       >
-        <Image src={image} alt={title} className="object-fill w-full h-full" />
+        <Image
+          src={image}
+          alt={title}
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
+          className=" w-full h-full"
+        />
       </div>
       <div
-        // data-aos={`${reverse ? "zoom-in-up" : "zoom-in-up"}`}
         className={` ${
           reverse ? "lg:col-start-1 " : "lg:col-start-2 "
         } flex flex-col lg:gap-3 relative lg:row-start-1 xl:gap-9 lg:p-10 lg:bg-lightBLue lg:rounded-[30px]`}
@@ -48,7 +54,7 @@ export default function OurServicesCards({
           width="55"
           height="55"
           viewBox="0 0 55 55"
-          className="absolute max-sm:hidden right-[2.5%] bottom-[2.5%]"
+          className="absolute max-lg:hidden right-[2.5%] bottom-[2.5%]"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"

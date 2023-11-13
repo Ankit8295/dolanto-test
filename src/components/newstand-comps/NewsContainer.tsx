@@ -40,7 +40,10 @@ const RelatedPostSliderCard: React.FC<{ data: any }> = ({ data }) => {
         alt="a"
         width={250}
         height={300}
-        className="object-fill"
+        loading="lazy"
+        placeholder="blur"
+        objectFit="cover"
+        objectPosition="center"
       />
       <div className="w-[90%] px-2 pb-3 flex flex-col gap-1">
         <p>{data.identifier}</p>
@@ -81,10 +84,12 @@ export default function NewsContainer({
                 <Image
                   src={data.image}
                   alt={"image"}
+                  loading="lazy"
+                  placeholder="blur"
+                  objectFit="cover"
+                  objectPosition="center"
                   className={`  rounded-tl-xl rounded-bl-xl ${
-                    i === 0
-                      ? "object-fill  w-full h-full "
-                      : "object-fill max-xl:w-full h-full "
+                    i === 0 ? "w-full h-full" : "max-xl:w-full h-full "
                   }`}
                 />
               </div>
@@ -116,7 +121,11 @@ export default function NewsContainer({
                       <Image
                         src={data.author.image}
                         alt="img-author"
-                        className="w-full h-full object-fill"
+                        loading="lazy"
+                        placeholder="blur"
+                        objectFit="cover"
+                        objectPosition="center"
+                        className="w-full h-full"
                       />
                       <div className="flex flex-col items-start">
                         <span className="text-[#183B56] font-semibold">

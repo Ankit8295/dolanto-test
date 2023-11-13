@@ -11,7 +11,11 @@ export default function Page() {
           src={map}
           alt="map image"
           data-aos="fade-right"
-          className="object-fill w-full max-lg:h-[300px] max-lg:object-cover max-lg:rounded-3xl "
+          loading="lazy"
+          objectPosition="center"
+          placeholder="blur"
+          objectFit="cover"
+          className="h-full w-full max-sm:h-[400px] "
         />
         <div
           data-aos="fade-up"

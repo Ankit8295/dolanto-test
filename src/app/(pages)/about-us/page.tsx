@@ -93,12 +93,19 @@ export default function Page() {
           </svg>
         </button>
       </div>
-      <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto flex flex-col items-center gap-5">
-        <HeadingTag customTailwindStyle=" w-full flex items-center justify-center">
-          <GradientText customTailwindStyle="text-center font-bold">
-            “MEET THE BOARD BEHIND THE SUCCESS”
-          </GradientText>
-        </HeadingTag>
+      <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto flex flex-col items-center gap-8">
+        <div className="w-full flex flex-col items-center">
+          <HeadingTag customTailwindStyle=" w-full flex items-center justify-center">
+            <GradientText customTailwindStyle="text-center font-bold">
+              “MEET THE BOARD BEHIND THE SUCCESS”
+            </GradientText>
+          </HeadingTag>
+          <p className="text-center w-[70%] mx-auto max-sm:w-full">
+            Our team is comprised of experienced architects, designers, and
+            project managers who share a common goal of creating exceptional
+            spaces.
+          </p>
+        </div>
         <Swiper
           slidesPerView={1.2}
           navigation={{

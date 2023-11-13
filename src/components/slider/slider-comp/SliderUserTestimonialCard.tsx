@@ -11,11 +11,14 @@ export default function SliderUserTestimonialCard({ data }: Props) {
       <span>{`"${data.comment}"`}</span>
       <div className="flex gap-2">
         <Image
-          width={30}
-          height={30}
+          width={35}
+          height={35}
           src={data?.image}
           alt="review person image"
-          className="object-contain"
+          loading="lazy"
+          placeholder="blur"
+          objectFit="cover"
+          objectPosition="center"
         />
         <div className="flex flex-col items-start">
           <span>{data.name}</span>

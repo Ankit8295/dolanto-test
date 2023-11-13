@@ -36,7 +36,10 @@ export default function SectorsOffering({}: Props) {
                 width={450}
                 height={200}
                 alt={card.title}
-                className="object-fill"
+                loading="lazy"
+                placeholder="blur"
+                objectFit="cover"
+                objectPosition="center"
               />
             </div>
           ))}
@@ -57,7 +60,10 @@ export default function SectorsOffering({}: Props) {
                   width={450}
                   height={200}
                   alt={card.title}
-                  className="object-fill"
+                  loading="lazy"
+                  placeholder="blur"
+                  objectFit="cover"
+                  objectPosition="center"
                 />
               </div>
             ))}
