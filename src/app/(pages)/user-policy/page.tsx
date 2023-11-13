@@ -12,7 +12,10 @@ export default function page() {
         microorganisms, aerosol particles, and chemical vapor, a clean room
         environment is essential.
       </PageDescription>
-      <div className="w-[80%] mx-auto p-10 max-lg:w-full flex flex-col gap-5 text-[#001942] bg-lightBLue rounded-xl">
+      <div
+        data-aos="fade-up"
+        className="w-[80%] mx-auto p-10 max-lg:w-full flex flex-col gap-5 text-[#001942] bg-lightBLue rounded-xl"
+      >
         <h2 className="text-secondary font-semibold text-lg">Introduction</h2>
         <span>
           At Creative Tim, accessible here, one of our main priorities is the

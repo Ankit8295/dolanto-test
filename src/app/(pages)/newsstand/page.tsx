@@ -1,49 +1,8 @@
-"use client";
 import NewsContainer from "@/src/components/newstand-comps/NewsContainer";
 import PageDescription from "@/src/components/page-description/PageDescription";
-import CustomSlider from "@/src/components/slider/CustomSlider";
-import {
-  latestNewsFromDolanto,
-  relatedPostsData,
-  socialPostsData,
-} from "@/src/constants/news";
-import Image from "next/image";
-import Link from "next/link";
+import { latestNewsFromDolanto, relatedPostsData } from "@/src/constants/news";
+import SocialPostSlider from "@/src/components/slider/SocialPostSlider";
 
-const RelatedPostSliderCard: React.FC<{ data: any }> = ({ data }) => {
-  return (
-    <div className="w-full h-full bg-lightBLue rounded-xl flex flex-col items-center gap-5">
-      <Image
-        src={data.image}
-        alt="a"
-        width={250}
-        height={300}
-        className="object-fill"
-      />
-      <div className="w-[90%] px-2 pb-3 flex flex-col gap-1">
-        <p>{data.identifier}</p>
-        <p className="font-bold ">{data.title}</p>
-        <p className="text-xs font-light">{data.date}</p>
-      </div>
-    </div>
-  );
-};
-const SocialPostSliderCard: React.FC<{ data: any }> = ({ data }) => {
-  return (
-    <div className="w-full h-full flex flex-col items-center gap-5">
-      <Image
-        src={data.image}
-        alt="a"
-        width={250}
-        height={300}
-        className="object-fill rounded-3xl"
-      />
-      <span className="text-sm w-[80%] mx-auto text-center font-medium">
-        {data.title}
-      </span>
-    </div>
-  );
-};
 export default function page() {
   return (
     <div className="w-full flex flex-col gap-10">
@@ -56,29 +15,19 @@ export default function page() {
         industries through innovative design concepts and material technologies.
       </PageDescription>
       <NewsContainer
-        RelatedPostSliderCard={RelatedPostSliderCard}
         containerTitle="Latest from Dolanto"
         newsData={latestNewsFromDolanto}
         relatedPostData={relatedPostsData}
-        slidePerSlider={6}
       />
       <NewsContainer
         containerTitle="White paper"
         newsData={latestNewsFromDolanto}
       />
-      <CustomSlider
-        slideCount={4}
-        sliderName="socialBlogs"
-        navigation={true}
-        slideData={socialPostsData}
-        SliderCard={SocialPostSliderCard}
-      />
+      <SocialPostSlider />
       <NewsContainer
-        RelatedPostSliderCard={RelatedPostSliderCard}
         containerTitle="Blogs & Articles"
         newsData={latestNewsFromDolanto}
         relatedPostData={relatedPostsData}
-        slidePerSlider={6}
       />
     </div>
   );
