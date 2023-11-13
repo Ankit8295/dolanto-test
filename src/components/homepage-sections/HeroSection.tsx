@@ -65,8 +65,8 @@ export default function HeroSection() {
           <div
             className={`flex flex-col max-lg:hidden  ${
               index === 0
-                ? "w-[70%] left-[2.5%] translate-y-[60%] group-hover:-translate-y-[7.5%]"
-                : " w-[90%] left-0 right-0 translate-y-2/3 group-hover:-translate-y-[7.5%]"
+                ? "w-[70%] left-[2.5%] translate-y-[72.5%] group-hover:-translate-y-[7.5%]"
+                : " w-[90%] left-0 right-0 translate-y-[72.5%] group-hover:-translate-y-[7.5%]"
             }  gap-5 items-start absolute  z-20 mx-auto bottom-0  transition-transform duration-500 `}
           >
             <div className="bg-white  rounded-lg p-2 cursor-pointer flex items-center justify-center">
