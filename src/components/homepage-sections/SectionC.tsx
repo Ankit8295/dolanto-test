@@ -93,8 +93,6 @@ export default function SectionC({}: Props) {
             alt={"modal image"}
             width={550}
             height={300}
-            priority={true}
-            quality={100}
           />
         </div>
         <div className="grid grid-cols-3 p-5 gap-2 bg-[#F1F4F9] max-lg:grid-cols-1 max-lg:w-full rounded-3xl">

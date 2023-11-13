@@ -37,7 +37,6 @@ export default function page() {
             src={careersImg}
             alt="career image"
             priority={true}
-            quality={100}
             className="object-center rounded-xl w-full h-full  max-[1200px]:w-full"
           />
         </div>

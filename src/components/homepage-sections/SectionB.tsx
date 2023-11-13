@@ -20,8 +20,6 @@ export default function SectionB() {
       >
         <Image
           src={aboutImg}
-          priority={true}
-          quality={100}
           height={500}
           alt={"dolanto about image"}
           className="object-cover h-full w-full max-h-[800px]  rounded-3xl"

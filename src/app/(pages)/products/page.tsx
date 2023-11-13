@@ -27,8 +27,6 @@ export default function page() {
           src={labFurnitureImg}
           alt="lab furniture"
           width={500}
-          priority={true}
-          quality={100}
           height={500}
         />
       </div>
@@ -37,8 +35,6 @@ export default function page() {
           src={fabrication}
           alt="lab furniture"
           width={500}
-          priority={true}
-          quality={100}
           height={500}
           className="object-cover rounded-xl col-span-1 max-lg:w-full max-lg:row-start-2"
         />
@@ -70,8 +66,6 @@ export default function page() {
             alt="Condition Storages"
             width={500}
             height={500}
-            priority={true}
-            quality={100}
             className=" rounded-xl max-lg:w-full"
           />
           <div className="bg-lightBLue p-5 flex flex-col gap-2 grow">
@@ -102,8 +96,6 @@ export default function page() {
             src={merchandising}
             alt="Condition Storages"
             width={500}
-            priority={true}
-            quality={100}
             height={500}
             className=" rounded-xl max-lg:w-full"
           />
@@ -121,8 +113,6 @@ export default function page() {
             src={facades}
             alt="Condition Storages"
             width={500}
-            priority={true}
-            quality={100}
             height={500}
             className=" rounded-xl max-lg:w-full"
           />

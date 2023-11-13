@@ -60,6 +60,7 @@ export default function HeroSection() {
           <Image
             src={cards.imgSrc}
             alt={cards.title}
+            priority={true}
             className="object-cover w-full h-full rounded-3xl"
           />
           <div
