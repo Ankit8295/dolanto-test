@@ -1,6 +1,8 @@
-import PageDescription from "@/src/components/page-description/PageDescription";
-import ourServiceImg from "@/public/media/about-us/story.png";
+import building from "@/public/media/services/building.webp";
+import designing from "@/public/media/services/designing.webp";
 import OurServicesCards from "@/src/components/cards/OurServicesCards";
+import aftersalesservice from "@/public/media/services/aftersalesservice.webp";
+import PageDescription from "@/src/components/page-description/PageDescription";
 
 export default function page() {
   return (
@@ -12,19 +14,19 @@ export default function page() {
         a collaborative design consultation, leading seamlessly into the
         meticulous production of tailored lab furniture, culminating in a
         seamless installation process, and ongoing dedicated support long after
-        the setup is complete.{" "}
+        the setup is complete.
       </PageDescription>
       <div className="w-full h-full flex flex-col gap-10">
-        <OurServicesCards image={ourServiceImg} title="Designing">
+        <OurServicesCards image={designing} title="Designing">
           While we collaborate with you every step ahead, our unwavering
           commitment to precision is evident, particularly when conceptualizing
           equipment that adheres to the highest safety protocols and ergonomic
           principles. Through state-of-the-art software, we go the extra mile to
           engineer equipment that serves its purpose seamlessly and optimizes
-          efficiency.  Eventually, we comprehend the individuality of each
+          efficiency. Eventually, we comprehend the individuality of each
           laboratory and its layout.
         </OurServicesCards>
-        <OurServicesCards reverse={true} image={ourServiceImg} title="Building">
+        <OurServicesCards reverse={true} image={building} title="Building">
           At Dolanto, we always consider the importance of establishing a
           functional workspace to facilitate groundbreaking research. As we
           offer bespoke workspace solutions, our skilled professionals assure
@@ -33,7 +35,10 @@ export default function page() {
           high-quality, and custom-designed furniture through the
           state-of-the-art manufacturing facility.
         </OurServicesCards>
-        <OurServicesCards image={ourServiceImg} title="After Sales Services">
+        <OurServicesCards
+          image={aftersalesservice}
+          title="After Sales Services"
+        >
           Dolanto&apos;s dedication in assisting organizations doesn&apos;t end
           with the successful installation of equipment or setting up a layout
           by our experts. We traverse extra miles ahead by offering product

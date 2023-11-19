@@ -47,9 +47,9 @@ export default function AboutUsCards({
         <h2 className="bg-footerColor max-lg:hidden rounded-xl py-2 px-4 text-white text-sm  text-center w-fit">
           {title}
         </h2>
-        <span className="max-[1280px]:text-[1.6rem] max-lg:text-base max-[1150px]:text-[1.4rem] xl:text-3xl xl:leading-10 lg:text-start lg:font-light  text-center">
+        <p className="  xl:text-xl text-base 2xl:leading-relaxed lg:text-start 2xl:text-3xl font-light  text-center">
           {children}
-        </span>
+        </p>
       </div>
     </div>
   );

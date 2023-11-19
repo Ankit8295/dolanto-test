@@ -1,5 +1,5 @@
 import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
-import careersImg from "@/public/media/careers/careers.png";
+import careersImg from "@/public/media/careers/careers.webp";
 import Image from "next/image";
 import { careerCard2Data, careerCardData } from "@/src/constants/career";
 import CareerCard from "@/src/components/careers/CareerCard";

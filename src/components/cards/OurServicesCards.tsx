@@ -17,7 +17,7 @@ export default function OurServicesCards({
   return (
     <div
       data-aos="fade-up"
-      className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10  grid-rows-[auto] lg:grid-rows-1 justify-items-center lg:justify-items-start gap-y-5 lg:gap-y-0"
+      className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 lg:gap-x-10  grid-rows-[auto] justify-items-center lg:justify-items-start gap-y-5 lg:gap-y-0"
     >
       <h2 className="lg:hidden row-span-1 row-start-1 bg-footerColor rounded-xl py-2 px-4 text-white text-sm  text-center w-fit">
         {title}
@@ -36,23 +36,23 @@ export default function OurServicesCards({
           placeholder="blur"
           objectFit="cover"
           objectPosition="center"
-          className=" w-full h-full"
+          className="w-full h-full"
         />
       </div>
       <div
         className={` ${
           reverse ? "lg:col-start-1 " : "lg:col-start-2 "
-        } flex flex-col lg:gap-3 relative lg:row-start-1 xl:gap-9 lg:p-10 lg:bg-lightBLue lg:rounded-[30px]`}
+        } flex flex-col  relative lg:row-start-1 gap-7 lg:p-10 lg:bg-lightBLue lg:rounded-[30px]`}
       >
-        <h2 className="max-lg:hidden text-[#001942] text-[3.35rem] max-xl:text-[3rem]">
+        <h2 className="max-lg:hidden text-[#001942] xl:text-4xl  max-xl:text-2xl font-medium 2xl:text-5xl">
           {title}
         </h2>
-        <span className="max-[1280px]:text-[1.6rem] max-lg:text-base max-[1150px]:text-[1.4rem] xl:text-3xl xl:leading-10 lg:text-start lg:font-light  text-center">
+        <p className="xl:text-xl text-base 2xl:leading-relaxed lg:text-start 2xl:text-3xl font-light  text-center">
           {children}
-        </span>
+        </p>
         <svg
-          width="55"
-          height="55"
+          width="40"
+          height="40"
           viewBox="0 0 55 55"
           className="absolute max-lg:hidden right-[2.5%] bottom-[2.5%]"
           fill="none"
