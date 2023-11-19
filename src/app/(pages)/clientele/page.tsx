@@ -23,13 +23,12 @@ export default function Page() {
     <>
       <div className="flex flex-col gap-10">
         <PageDescription title="CLIENTELE">
-          Dolanto is an international leading cleanroom design, construction and
-          installation company. MRC manufactures a range of cleanroom partition
-          systems and accessories, as well as provides turnkey cleanroom design
-          and build projects across every continent. Established in 1980 in the
-          United Kingdom MRC has supported the progression of high end
-          engineering industries through innovative design concepts and material
-          technologies.
+          At Dolanto, we have been proud about serving a diverse range of
+          clients who are at the forefront of innovation. We have provided lab
+          furniture and accessories not only to organizations across India but
+          also worldwide. With clientele spanning across various sectors, we
+          have portrayed our ability to design and manufacture lab furniture
+          with the requirements in mind.
         </PageDescription>
         <div className="text-lg flex gap-5 max-md:grid max-md:grid-cols-2">
           <div

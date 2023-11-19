@@ -15,20 +15,24 @@ export default function Page() {
   return (
     <>
       <PageDescription title="ABOUT US">
-        Dolanto is an international leading cleanroom design, construction and
-        installation company. MRC manufactures a range of cleanroom partition
-        systems and accessories, as well as provides turnkey cleanroom design
-        and build projects across every continent. Established in 1980 in the
-        United Kingdom MRC has supported the progression of high end engineering
-        industries through innovative design concepts and material technologies.
+        Established in Thane, Dolanto commenced its journey in __________ with a
+        bold spirit of innovation. While our team brims with passion, we infuse
+        novelty with experience. Dolanto is certainly an agile hub of futuristic
+        designs for cleanroom panels and partitions, Modular OTs, as well as
+        laboratory furniture and fume hoods. Way ahead, our engineers are
+        dedicated to pioneering pre-engineered structures tailored for the
+        discrete needs of the biopharmaceutical, and pharmaceutical sectors and
+        many more. Ensuring the creation of distinctive work, we adhere to
+        protocols right from the nascent stages, to meticulous attention to
+        detail.
       </PageDescription>
       <AboutUsCards image={ourStoryImg} title="Our Story">
-        Spectrum PharmaTECH, one of the leading Pharma Consultants in India, is
-        an internationally recognised company that provides Design Engineering
-        and EPC services globally to a wide range of industries such as
-        Pharmaceutical, Biopharmaceuticals, Food, Beverage, and Cosmetic
-        industries while meeting the most stringent regulatory requirements. We
-        are ISO 9001:2015 certified.
+        Since 2023, Dolanto has emerged with the synergy between two sister
+        organizations, Symbion Scientific Solutions and Partitions & Doors. With
+        the prime focus of resolving design conundrums, the visionary alliance
+        develops laboratory furniture and equipment for a wide spectrum of
+        sectors, encompassing Healthcare, Pharmaceuticals, Microelectronics, and
+        many more.
       </AboutUsCards>
       <div
         data-aos="fade-up"
@@ -166,20 +170,17 @@ export default function Page() {
       </div>
 
       <AboutUsCards reverse={true} image={ourStoryImg} title="Our Mission">
-        Spectrum PharmaTECH, one of the leading Pharma Consultants in India, is
-        an internationally recognised company that provides Design Engineering
-        and EPC services globally to a wide range of industries such as
-        Pharmaceutical, Biopharmaceuticals, Food, Beverage, and Cosmetic
-        industries while meeting the most stringent regulatory requirements. We
-        are ISO 9001:2015 certified.
+        “Our mission is to consistently deliver high-quality products that
+        surpass customer expectations while fostering a culture of innovation
+        and operational excellence. While we offer our services in and around
+        the US market, we are quite committed to drive everything with passion
+        burning within us.”
       </AboutUsCards>
       <AboutUsCards image={ourStoryImg} title="Our Vision">
-        Spectrum PharmaTECH, one of the leading Pharma Consultants in India, is
-        an internationally recognised company that provides Design Engineering
-        and EPC services globally to a wide range of industries such as
-        Pharmaceutical, Biopharmaceuticals, Food, Beverage, and Cosmetic
-        industries while meeting the most stringent regulatory requirements. We
-        are ISO 9001:2015 certified.
+        “Our vision is to be the foremost provider of equipment, setting the
+        standard for innovation, quality and reliability. We aim to continuously
+        push the boundaries of technological advancements, ensuring that the
+        products are designed for a safe and sterile environment for research.”
       </AboutUsCards>
     </>
   );

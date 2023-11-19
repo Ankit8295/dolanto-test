@@ -16,8 +16,8 @@ export default function HeroSection() {
         className="col-span-2 flex justify-between flex-col pb-4 max-sm:pb-0"
       >
         <HeadingTag>
-          <GradientText>Transforming</GradientText> Possibilities into
-          <GradientText> Reality</GradientText> with Premier EPC Solutions.
+          Presenting <GradientText>Engineering Prowess</GradientText> with a Key
+          Focus on Details
         </HeadingTag>
         <div className="flex gap-5 max-sm:hidden w-fit whitespace-nowrap">
           <LinkButton
@@ -77,9 +77,7 @@ export default function HeroSection() {
               <TiltArrow />
             </div>
             <div className=" text-black text-sm max-lg:text-xs   font-light bg-white p-2 rounded-xl">
-              {index === 0
-                ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero"
-                : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proinornare sem sed quam tempus aliquet vitae eget dolor. Proin euultrices libero"}
+              {cards.summary}
             </div>
           </div>
         </div>

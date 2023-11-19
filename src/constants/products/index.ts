@@ -22,10 +22,9 @@ const fabricationProducts = [
 ];
 const conditionedStoragesProducts = [
   { name: "Chambers", link: "chambers" },
-  { name: "Ovens", link: "ovens" },
-  { name: "Incubator", link: "incubator" },
-  { name: "Cold Rooms", link: "cold Rooms" },
-  { name: "Freezer", link: "freezer" },
+  { name: "Cold Rooms", link: "cold-rooms" },
+  { name: "Shakers & Incubator", link: "shakers-incubator" },
+  { name: "Freezer & Refrigerator", link: "freezer-refrigerator" },
 ];
 
 export { fabricationProducts, conditionedStoragesProducts };

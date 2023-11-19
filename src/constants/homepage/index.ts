@@ -22,26 +22,40 @@ import testimonialImgA from "@/public/media/homepage/reviewAbout.png";
 import { StaticImageData } from "next/image";
 import { HomeModalData } from "@/src/utils/types";
 
-const heroSectionCards: { title: string; imgSrc: StaticImageData }[] = [
+const heroSectionCards: {
+  title: string;
+  imgSrc: StaticImageData;
+  summary: string;
+}[] = [
   {
     title: "Clean Rooms",
     imgSrc: clearnRoomImg,
+    summary:
+      "While Dolanto leverages the best of designing principles and technologies, our team is the cast of trailblazers for chemical resistant cleanroom panels meant for areas where there’s a need for high level of cleanliness.",
   },
   {
     title: "Doors",
     imgSrc: doorImg,
+    summary:
+      "Our easy to integrate and durable cleanroom doors certainly play a vital role in sealing the controlled environment for most industrial circumstances.",
   },
   {
     title: "Modular OT",
     imgSrc: modularOtImg,
+    summary:
+      "With high-quality patient care as the prime concern, our Modular Operation Theaters are designed for a sterile working environment. ",
   },
   {
     title: "Lab Furniture",
     imgSrc: labImg,
+    summary:
+      "At Dolanto, we comprehend that lab furniture is an essential component of a laboratory. This ignites the adeptness to drive designing beyond the limits.",
   },
   {
     title: "Pharma Equipments",
     imgSrc: pharmaImg,
+    summary:
+      "Years of expertise has honed our capabilities to design pharmaceutical equipment for regulated facilities with stringent quality requirements.",
   },
 ];
 
@@ -51,21 +65,22 @@ const homeAboutCards: {
   description: string;
 }[] = [
   {
-    title: "400+",
-    subTitle: "Happy clients across the globe",
+    title: "200+",
+    subTitle: "Employee Strength",
     description:
-      "Our team of dedicated experts is passionate about ensuring clients satisfaction.",
+      "Our cohort of devoted professionals is fervently committed to ensure client satisfaction.",
   },
   {
     title: "600+",
     subTitle: "Accomplished Projects",
     description:
-      "Our team of dedicated experts is passionate about driving measurable results and ensure clients satisfaction",
+      "Our projects are a testament to our expertise, competency and dedication.",
   },
   {
-    title: "7 Lakh",
-    subTitle: "Square metre",
-    description: "Clean room Panels installed Worldwide",
+    title: "07",
+    subTitle: "Continents",
+    description:
+      "Our projects are a testament to our expertise, competency and dedication.",
   },
 ];
 
@@ -188,7 +203,7 @@ const productServiceModalsTitle: HomeModalData[] = [
 const userTestimonialData = [
   {
     comment:
-      "Exceptional Precision and Quality! Dolanto’s clean room solution exceeded our expectations. Their meticulous attention to detail and unwavering commitment to delivering a clean room environment truly impressed us.",
+      "“Through the years, Dolanto’s work culture has always been distinct by its vibrancy. Across the tenure of 4 years, I was always on a learning curve while I had to constantly shoulder different responsibilities within the agile work environment.”",
     name: "Sarah Johnson",
     designation: "Managing Director at L&T",
     image: testimonialImgA,

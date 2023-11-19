@@ -35,8 +35,9 @@ export default function SectionB() {
       >
         <BlueButtonWrapper>About Us</BlueButtonWrapper>
         <HeadingTag>
-          With each client, we <GradientText>strive</GradientText> to stand out
-          from the crowd and bring a fresh wind of change
+          With every Client, our{" "}
+          <GradientText>Expertise in Fabrication</GradientText> unveils a Fresh
+          Perspective
         </HeadingTag>
         <Image
           src={aboutClientImg}

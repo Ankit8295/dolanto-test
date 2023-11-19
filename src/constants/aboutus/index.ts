@@ -81,9 +81,24 @@ export const teamDetails = [
 
 export const journeyDetails = [
   {
-    title: "Archy Founding",
+    title: "Partitions & Doors (P & D)",
     description:
-      "The company is founded by John Smith, an experienced architect with a passion for sustainable design.",
+      "The establishment of P & D ensued as it took over the operations of a manufacturing entity.",
+    image: foundingAImg,
+    year: 2020,
+  },
+  {
+    title: "Symbion Scientific Solutions",
+    description:
+      "Marking its inception, Symbion Scientific Soln. demonstrated its expertise in developing lab spaces.",
+    image: foundingAImg,
+    year: 2017,
+  },
+
+  {
+    title: "Dolanto",
+    description:
+      "Dolanto emerged through the merger of P & D and Symbion, facilitated by foreign investment.",
     image: foundingAImg,
     year: 2001,
   },
@@ -92,27 +107,6 @@ export const journeyDetails = [
     description:
       "The company is founded by John Smith, an experienced architect with a passion for sustainable design.",
     image: foundingAImg,
-    year: 2002,
-  },
-  {
-    title: "Archy Founding",
-    description:
-      "The company is founded by John Smith, an experienced architect with a passion for sustainable design.",
-    image: foundingAImg,
-    year: 2003,
-  },
-  {
-    title: "Archy Founding",
-    description:
-      "The company is founded by John Smith, an experienced architect with a passion for sustainable design.",
-    image: foundingAImg,
     year: 2004,
-  },
-  {
-    title: "Archy Founding",
-    description:
-      "The company is founded by John Smith, an experienced architect with a passion for sustainable design.",
-    image: foundingAImg,
-    year: 2005,
   },
 ];

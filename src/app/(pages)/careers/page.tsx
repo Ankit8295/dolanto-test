@@ -19,10 +19,9 @@ export default function page() {
           className="flex flex-col max-[1200px]:gap-8 justify-between"
         >
           <HeadingTag>
-            We are
-            <GradientText> Gathering</GradientText> a team of{" "}
-            <GradientText>Like-minded People</GradientText> who are ready to
-            grow professionally.
+            We constantly scout talent who dream in
+            <GradientText> Developing</GradientText> their{" "}
+            <GradientText>Career.</GradientText>
           </HeadingTag>
           <div className="grid grid-cols-4 gap-x-3 max-sm:gap-2 items-center">
             {careerCardData.map((card) => (
@@ -58,7 +57,7 @@ export default function page() {
             key={i}
             className={`bg-lightBLue p-3 xl:col-start-[${
               (i === 0 && 1) || (i === 1 && 3) || (i === 2 && 5)
-            }] xl:col-span-2 rounded-2xl xl:row-start-1 col-span-1  flex flex-col items-start justify-center`}
+            }] xl:col-span-2 rounded-2xl xl:row-start-1 col-span-1  flex flex-col items-start justify-start pt-5`}
           >
             <div>
               <GradientText customTailwindStyle="text-[32px] xl:text-5xl font-medium leading-tight">

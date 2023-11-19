@@ -77,7 +77,7 @@ export default function page() {
               excellent performance, factory prefabrication, field splicing and
               simple module installation functions.
             </span>
-            <div className="grid grid-cols-3 gap-3 justify-between   pt-5">
+            <div className="grid grid-cols-2 gap-3 justify-between   pt-5">
               {conditionedStoragesProducts.map((products) => (
                 <Link
                   className=" text-start  max-xl:text-sm"
@@ -91,38 +91,53 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col max-lg:flex-col-reverse gap-7 h-full">
-          <Image
-            src={merchandising}
-            alt="Condition Storages"
-            width={500}
-            height={500}
-            className=" rounded-xl max-lg:w-full"
-          />
-          <div className="bg-lightBLue p-5 flex flex-col gap-2 grow">
-            <h1 className="text-2xl max-lg:text-center">Merchandising</h1>
-            <span>
-              Dolanto provides different cleanroom sandwich panels with
-              excellent performance, factory prefabrication, field splicing and
-              simple module installation functions.
-            </span>
+        <div className="flex flex-col gap-5 col-span-2">
+          <div className="flex max-lg:flex-col-reverse gap-5 h-full">
+            <Image
+              src={merchandising}
+              alt="Condition Storages"
+              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+            />
+            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+              <h1 className="text-2xl max-lg:text-center">Merchandising</h1>
+              <span>
+                Dolanto provides different cleanroom sandwich panels with
+                excellent performance, factory prefabrication, field splicing
+                and simple module installation functions.
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col max-lg:flex-col-reverse gap-7 h-full">
-          <Image
-            src={facades}
-            alt="Condition Storages"
-            width={500}
-            height={500}
-            className=" rounded-xl max-lg:w-full"
-          />
-          <div className="bg-lightBLue p-5 flex flex-col gap-2 grow">
-            <h1 className="text-2xl max-lg:text-center">Facades</h1>
-            <span>
-              Dolanto provides different cleanroom sandwich panels with
-              excellent performance, factory prefabrication, field splicing and
-              simple module installation functions.
-            </span>
+          <div className="flex max-lg:flex-col-reverse gap-5 h-full">
+            <Image
+              src={facades}
+              alt="Condition Storages"
+              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+            />
+            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+              <h1 className="text-2xl max-lg:text-center">Facades</h1>
+              <span>
+                Dolanto provides different cleanroom sandwich panels with
+                excellent performance, factory prefabrication, field splicing
+                and simple module installation functions.
+              </span>
+            </div>
+          </div>
+          <div className="flex max-lg:flex-col-reverse gap-5 h-full">
+            <Image
+              src={facades}
+              alt="Condition Storages"
+              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+            />
+            <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+              <h1 className="text-2xl max-lg:text-center">
+                Pre Engineered Building
+              </h1>
+              <span>
+                Dolanto provides different cleanroom sandwich panels with
+                excellent performance, factory prefabrication, field splicing
+                and simple module installation functions.
+              </span>
+            </div>
           </div>
         </div>
       </div>

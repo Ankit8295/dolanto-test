@@ -15,7 +15,9 @@ export default function SectorsOffering({}: Props) {
         data-aos="fade-up"
         className="flex justify-center items-center w-full"
       >
-        <HeadingTag>We Provided offerings in different sectors</HeadingTag>
+        <HeadingTag>
+          Here’s a glimpse of different sectors Dolanto serves
+        </HeadingTag>
       </div>
       <div
         className={`grid gap-4 grid-cols-4 grid-rows-[auto] transition max-[350px]:grid-cols-1 overflow-hidden  max-lg:grid-cols-2`}
