@@ -1,7 +1,6 @@
 "use client";
 import AboutUsCards from "@/src/components/cards/AboutUsCards";
 import PageDescription from "@/src/components/page-description/PageDescription";
-import ourStoryImg from "@/public/media/about-us/story.png";
 import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,6 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import AboutUsBoardSlide from "@/src/components/cards/AboutUsBoardSlide";
 import { journeyDetails, teamDetails } from "@/src/constants/aboutus";
 import AboutUsJourneySlide from "@/src/components/cards/AboutUsJourneySlide";
+import mission from "@/public/media/about-us/mission.webp";
+import story from "@/public/media/about-us/story.webp";
+import vision from "@/public/media/about-us/vision.webp";
 
 export default function Page() {
   return (
@@ -26,7 +28,7 @@ export default function Page() {
         protocols right from the nascent stages, to meticulous attention to
         detail.
       </PageDescription>
-      <AboutUsCards image={ourStoryImg} title="Our Story">
+      <AboutUsCards image={story} title="Our Story">
         Since 2023, Dolanto has emerged with the synergy between two sister
         organizations, Symbion Scientific Solutions and Partitions & Doors. With
         the prime focus of resolving design conundrums, the visionary alliance
@@ -125,12 +127,12 @@ export default function Page() {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
         >
           {teamDetails.map((teamMemberDetails, index) => (
-            <SwiperSlide key={teamMemberDetails.id}>
+            <SwiperSlide key={teamMemberDetails.id} className="w-full">
               <AboutUsBoardSlide index={index} data={teamMemberDetails} />
             </SwiperSlide>
           ))}
@@ -169,14 +171,14 @@ export default function Page() {
         </div>
       </div>
 
-      <AboutUsCards reverse={true} image={ourStoryImg} title="Our Mission">
+      <AboutUsCards reverse={true} image={mission} title="Our Mission">
         “Our mission is to consistently deliver high-quality products that
         surpass customer expectations while fostering a culture of innovation
         and operational excellence. While we offer our services in and around
         the US market, we are quite committed to drive everything with passion
         burning within us.”
       </AboutUsCards>
-      <AboutUsCards image={ourStoryImg} title="Our Vision">
+      <AboutUsCards image={vision} title="Our Vision">
         “Our vision is to be the foremost provider of equipment, setting the
         standard for innovation, quality and reliability. We aim to continuously
         push the boundaries of technological advancements, ensuring that the
