@@ -36,10 +36,7 @@ export default function Page() {
         sectors, encompassing Healthcare, Pharmaceuticals, Microelectronics, and
         many more.
       </AboutUsCards>
-      <div
-        data-aos="fade-up"
-        className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto "
-      >
+      <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto flex flex-col items-center gap-8">
         <Swiper
           slidesPerView={1}
           navigation={{
@@ -49,6 +46,7 @@ export default function Page() {
           }}
           spaceBetween={0}
           modules={[Navigation]}
+          className={`mySwiper w-full`}
           breakpoints={{
             768: {
               slidesPerView: 2,
@@ -57,18 +55,14 @@ export default function Page() {
               slidesPerView: 3,
             },
           }}
-          className="mySwiper w-[93%] max-md:w-[90%] max-lg:w-[91%] max-sm:w-[85%] mx-auto mt-14"
         >
           {journeyDetails.map((journey, index) => (
-            <SwiperSlide
-              key={index}
-              className={` !flex items-center justify-center max-w-[100%]`}
-            >
+            <SwiperSlide key={index} className={`className="w-full"`}>
               <AboutUsJourneySlide index={index} data={journey} />
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="prevA group absolute top-1/2 translate-y-1/3 left-0 disabled:cursor-not-allowed ">
+        <button className="prevA group absolute z-30 top-1/2 translate-y-[-77.5%] left-0 disabled:cursor-not-allowed ">
           <svg
             width="30"
             height="25"
@@ -83,7 +77,7 @@ export default function Page() {
             />
           </svg>
         </button>
-        <button className="nextA group absolute top-1/2 translate-y-1/3 right-0 disabled:cursor-not-allowed ">
+        <button className="nextA group absolute z-30 top-1/2 translate-y-[-77.5%] right-0 disabled:cursor-not-allowed ">
           <svg
             width="30"
             className="group-disabled:opacity-40"
@@ -113,15 +107,17 @@ export default function Page() {
           </p>
         </div>
         <Swiper
-          slidesPerView={1.2}
+          slidesPerView={1}
           navigation={{
             enabled: true,
             nextEl: ".next",
             prevEl: ".prev",
           }}
           modules={[Navigation]}
-          spaceBetween={20}
-          className="mySwiper w-full"
+          spaceBetween={50}
+          className={`mySwiper ${
+            teamDetails.length > 3 ? "w-[80%]" : "w-[95%]"
+          }`}
           breakpoints={{
             768: {
               slidesPerView: 2,
@@ -131,9 +127,9 @@ export default function Page() {
             },
           }}
         >
-          {teamDetails.map((teamMemberDetails, index) => (
+          {teamDetails.map((teamMemberDetails) => (
             <SwiperSlide key={teamMemberDetails.id} className="w-full">
-              <AboutUsBoardSlide index={index} data={teamMemberDetails} />
+              <AboutUsBoardSlide data={teamMemberDetails} />
             </SwiperSlide>
           ))}
         </Swiper>

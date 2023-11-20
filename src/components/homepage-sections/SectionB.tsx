@@ -5,7 +5,6 @@ import { GradientText, HeadingTag } from "../tags/Tags";
 import { DownloadButtonIcon } from "../icons/Icons";
 import aboutImg from "@/public/media/homepage/home_about.png";
 import aboutClientImg from "@/public/media/homepage/home_aboutClient.png";
-import reviewAboutImg from "@/public/media/homepage/reviewAbout.png";
 import { homeAboutCards, userTestimonialData } from "@/src/constants/homepage";
 import { routes } from "@/src/constants/routes";
 import AutoSliderCard from "../slider/AutoSliderCard";
@@ -21,8 +20,7 @@ export default function SectionB() {
         <Image
           src={aboutImg}
           placeholder="blur"
-          objectFit="cover"
-          objectPosition="center"
+          quality={100}
           alt={"dolanto about image"}
           className="h-full w-full rounded-3xl"
         />

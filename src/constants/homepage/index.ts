@@ -1,9 +1,9 @@
-import clearnRoomImg from "@/public/media/homepage/hero_cleanroom.png";
-import doorImg from "@/public/media/homepage/hero_door.png";
+import clearnRoomImg from "@/public/media/homepage/hero_cleanroom.webp";
+import modularOtImg from "@/public/media/homepage/hero_modularot.webp";
+import pharmaImg from "@/public/media/homepage/hero_pharma.webp";
+import doorImg from "@/public/media/homepage/hero_door.webp";
+import labImg from "@/public/media/homepage/herp_lab.webp";
 import cardImg from "@/public/media/homepage/cardA.png";
-import modularOtImg from "@/public/media/homepage/hero_modularot.png";
-import labImg from "@/public/media/homepage/herp_lab.png";
-import pharmaImg from "@/public/media/homepage/hero_pharma.png";
 import cleanRoomModal from "@/public/media/homepage/cleanRoomModal.png";
 import modularOtModal from "@/public/media/homepage/modularOtModal.png";
 import doorModal from "@/public/media/homepage/doorModal.png";
@@ -18,7 +18,11 @@ import chemicals from "@/public/media/homepage/sectors/Chemicals.png";
 import healthcare from "@/public/media/homepage/sectors/Healthcare.png";
 import formulation from "@/public/media/homepage/sectors/formulation.png";
 import testimonialImgA from "@/public/media/homepage/reviewAbout.png";
-
+import cardbImg from "@/public/media/homepage/cardb.webp";
+import cardcImg from "@/public/media/homepage/cardc.webp";
+import carddImg from "@/public/media/homepage/cardd.webp";
+import cardeImg from "@/public/media/homepage/carde.webp";
+import cardfImg from "@/public/media/homepage/cardf.webp";
 import { StaticImageData } from "next/image";
 import { HomeModalData } from "@/src/utils/types";
 
@@ -235,33 +239,33 @@ const dynamicCardData = [
     id: 2,
     title: "You can do anything you set your mind to!",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: cardImg,
+    image: cardbImg,
   },
   {
     id: 3,
     title: "Engineering the future of medicine manufacturing",
     description: "",
-    image: cardImg,
+    image: cardcImg,
   },
   {
     id: 4,
     title:
       "Dolanto on engineering partner on Novo Nordisk’s DKK 17 on expansion in Kalundborg",
     description: "",
-    image: cardImg,
+    image: carddImg,
   },
   {
     id: 5,
     title: "An impressive financial year for Dolanto.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt.",
-    image: cardImg,
+    image: cardeImg,
   },
   {
     id: 6,
     title: "Customer story:",
     description: "Combining pharma expertise and management Consulting",
-    image: cardImg,
+    image: cardfImg,
   },
 ];
 export {

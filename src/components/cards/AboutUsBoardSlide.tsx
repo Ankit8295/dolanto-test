@@ -5,7 +5,6 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from "../icons/Icons";
 import Link from "next/link";
 
 type Props = {
-  index: number;
   data: {
     id: number;
     name: string;
@@ -20,13 +19,11 @@ type Props = {
   };
 };
 
-export default function AboutUsBoardSlide({ data, index }: Props) {
+export default function AboutUsBoardSlide({ data }: Props) {
   return (
     <div
       data-aos="fade-up"
-      className={`${
-        index % 2 === 0 ? "mt-10" : "mb-10"
-      } w-full group relative flex items-center justify-center`}
+      className={`w-full group relative lg:shadow rounded-[35px] lg:border overflow-hidden flex max-lg:flex-col items-center justify-center max-lg:gap-3`}
     >
       <Image
         src={data.image}
@@ -35,9 +32,9 @@ export default function AboutUsBoardSlide({ data, index }: Props) {
         placeholder="blur"
         objectFit="cover"
         objectPosition="center"
-        className="w-full h-full rounded-3xl"
+        className="w-full h-full "
       />
-      <div className="absolute group-hover:bottom-0 bg-white bottom-[-100%] max-lg:bottom-0 transition-all duration-300 pl-5 py-5 w-full flex flex-col  gap-1 items-start">
+      <div className="absolute max-lg:relative group-hover:bottom-0 max-lg:bg-lightBLue max-lg:rounded-3xl bg-white bottom-[-100%] max-lg:bottom-[0] transition-all duration-300 pl-5 py-5 w-full flex flex-col  gap-1 items-start">
         <GradientText customTailwindStyle="capitalize text-2xl leading-none">
           {data.name}
         </GradientText>

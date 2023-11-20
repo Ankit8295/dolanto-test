@@ -43,9 +43,9 @@ export default function AboutUsJourneySlide({ data, index }: Props) {
           index % 2 === 0
             ? "row-start-3 justify-start "
             : "row-start-1 justify-end"
-        } max-lg:row-span-3 max-lg:justify-start`}
+        } max-lg:row-span-3 max-lg:justify-start `}
       >
-        <p className="font-semibold text-[1.75rem] max-xl:text-2xl text-[#001942]">
+        <p className="font-semibold text-[1.75rem] text-center max-xl:text-2xl text-[#001942]">
           {data.title}
         </p>
         <p className="w-[70%] text-center text-xl max-xl:text-lg font-light">

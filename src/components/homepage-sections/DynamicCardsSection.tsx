@@ -3,6 +3,7 @@
 // import { getData } from "@/src/lib/queries";
 // import { useQuery } from "@tanstack/react-query";
 import cardImg from "@/public/media/homepage/cardA.png";
+
 import { dynamicCardData } from "@/src/constants/homepage";
 
 export default function CardsSection() {
@@ -33,7 +34,7 @@ export default function CardsSection() {
               <img
                 src={card.image.src}
                 alt="a"
-                className={`rounded-xl min-h-[50%] aspect-video`}
+                className={`rounded-xl min-h-[50%] `}
               />
               <div className="flex flex-col gap-2 max-sm:gap-0 pb-3">
                 <h2 className="font-medium max-lg:text-sm max-xl:text-2xl max-sm:leading-tight text-3xl">
@@ -66,11 +67,9 @@ export default function CardsSection() {
               key={card.id}
             >
               <img
-                src={cardImg.src}
+                src={card.image.src}
                 alt="a"
-                className={`${
-                  card.id === 5 ? "w-full" : "w-1/2"
-                } rounded-xl aspect-video`}
+                className={`${card.id === 5 ? "w-full" : "w-1/2"} rounded-xl `}
               />
               <div className="flex flex-col gap-2 ">
                 <h2 className="font-medium max-lg:text-sm max-xl:text-2xl text-3xl">
