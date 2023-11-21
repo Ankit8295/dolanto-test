@@ -30,7 +30,7 @@ export function HeadingTag({
 }) {
   return (
     <p
-      className={`break-words tracking-wider max-sm:text-[1.5rem] text-[3rem] max-[1180px]:text-[2.2rem] max-[1450px]:text-[2.25rem] leading-normal  text-start font-medium ${customTailwindStyle}`}
+      className={`break-words tracking-wider max-sm:text-[1.5rem] text-[3.25rem] max-[1180px]:text-[2.25rem] max-[1450px]:text-[2.75rem] leading-normal  text-start font-medium ${customTailwindStyle}`}
     >
       {children}
     </p>

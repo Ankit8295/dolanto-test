@@ -30,7 +30,7 @@ export default function SectorsOffering({}: Props) {
               key={card.id}
               className={`relative rounded-3xl flex items-start justify-start`}
             >
-              <span className="capitalize absolute left-[4%] max-sm:text-xs top-[8%] bg-white md:py-2 md:px-4 md:rounded-lg px-2 py-1 text-center min-w-[100px]  rounded-md">
+              <span className="capitalize absolute left-[4%] max-sm:text-xs top-[8%] bg-lightBLue text-[#001942] font-medium md:py-2 md:px-4 md:rounded-lg px-2 py-1 text-center min-w-[100px]  rounded-md">
                 {card.title}
               </span>
               <Image

@@ -41,9 +41,9 @@ export default function SectionC({}: Props) {
               "bg-[url('/media/homepage/formulation.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl w-[48%] max-lg:w-full bg-cover bg-center p-5 flex flex-col  "
             }
           >
-            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur-sm">
+            <div className="bg-black/20 p-4 rounded-3xl backdrop-blur-sm border border-white/70">
               <p>Design & Build</p>
-              <span className=" text-xs font-light">
+              <span className=" text-xs ">
                 A customer-centric approach enables us to bring your vision to
                 life. As we consider collaboration at the heart of our approach,
                 we create spaces that inspire.
@@ -56,9 +56,9 @@ export default function SectionC({}: Props) {
               "bg-[url('/media/homepage/afterSales.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl max-lg:w-full w-[48%] bg-cover bg-center p-5 flex flex-col"
             }
           >
-            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur-sm">
+            <div className="bg-black/20 p-4 rounded-3xl backdrop-blur-sm border border-white/70">
               <p className="  "> After Sales Services</p>
-              <span className=" text-xs font-light">
+              <span className=" text-xs ">
                 We extend our dedication for customer satisfaction far beyond
                 the instance of purchase. With experience, we have honed our
                 skills to offer product support.
@@ -73,9 +73,9 @@ export default function SectionC({}: Props) {
           }
         >
           <div className="w-2/3 max-lg:w-full flex flex-col pt-[15%] max-sm:pt-[25%] ">
-            <div className="bg-black/40 p-4 rounded-3xl backdrop-blur-sm">
+            <div className="bg-black/20 p-4 rounded-3xl backdrop-blur-sm border border-white/70">
               <p className="">Custom Solutions</p>
-              <span className=" text-xs font-light">
+              <span className=" text-xs ">
                 As we comprehend the uniqueness of every requirement, we offer
                 custom solutions by prioritizing proactive involvement for the
                 project.

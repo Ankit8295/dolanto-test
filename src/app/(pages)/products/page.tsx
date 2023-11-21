@@ -36,9 +36,9 @@ export default function page() {
           alt="lab furniture"
           width={500}
           height={500}
-          className="object-cover rounded-xl col-span-1 max-lg:w-full max-lg:row-start-2"
+          className="object-cover rounded-3xl   col-span-1 max-lg:w-full max-lg:row-start-2"
         />
-        <div className="col-span-2 max-lg:row-start-1 h-full bg-lightBLue text-black rounded-xl p-5">
+        <div className="col-span-2 max-lg:row-start-1 h-full bg-lightBLue text-black rounded-3xl  p-5">
           <h1 className="text-3xl max-lg:text-center">Fabrications</h1>
           <span>
             Dolanto provides different cleanroom sandwich panels with excellent
@@ -66,9 +66,9 @@ export default function page() {
             alt="Condition Storages"
             width={500}
             height={500}
-            className=" rounded-xl max-lg:w-full"
+            className=" rounded-3xl   max-lg:w-full"
           />
-          <div className="bg-lightBLue p-5 flex flex-col gap-2 grow">
+          <div className="bg-lightBLue p-5 flex flex-col rounded-3xl  gap-2 grow">
             <h1 className="text-2xl max-lg:text-center">
               Conditioned Storages
             </h1>
@@ -96,9 +96,9 @@ export default function page() {
             <Image
               src={merchandising}
               alt="Condition Storages"
-              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+              className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
-            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <h1 className="text-2xl max-lg:text-center">Merchandising</h1>
               <span>
                 Dolanto provides different cleanroom sandwich panels with
@@ -111,9 +111,9 @@ export default function page() {
             <Image
               src={facades}
               alt="Condition Storages"
-              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+              className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
-            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+            <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <h1 className="text-2xl max-lg:text-center">Facades</h1>
               <span>
                 Dolanto provides different cleanroom sandwich panels with
@@ -126,9 +126,9 @@ export default function page() {
             <Image
               src={facades}
               alt="Condition Storages"
-              className=" rounded-xl max-lg:w-full w-1/2 h-[250px]"
+              className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
-            <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full flex flex-col gap-2 grow">
+            <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <h1 className="text-2xl max-lg:text-center">
                 Pre Engineered Building
               </h1>
