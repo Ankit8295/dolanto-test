@@ -30,13 +30,11 @@ export default function page() {
           height={500}
         />
       </div>
-      <div className="grid grid-cols-3 items-center max-lg:grid-cols-1 grid-rows-[auto] gap-x-3 max-lg:gap-0 max-lg:gap-y-2 ">
+      <div className="grid grid-cols-3 items-center max-lg:grid-cols-1 grid-rows-[auto] gap-x-5 max-lg:gap-0 max-lg:gap-y-2 ">
         <Image
           src={fabrication}
           alt="lab furniture"
-          width={500}
-          height={500}
-          className="object-cover rounded-3xl   col-span-1 max-lg:w-full max-lg:row-start-2"
+          className=" rounded-3xl   col-span-1 w-full max-lg:row-start-2"
         />
         <div className="col-span-2 max-lg:row-start-1 h-full bg-lightBLue text-black rounded-3xl  p-5">
           <h1 className="text-3xl max-lg:text-center">Fabrications</h1>
@@ -64,9 +62,7 @@ export default function page() {
           <Image
             src={conditionStorages}
             alt="Condition Storages"
-            width={500}
-            height={500}
-            className=" rounded-3xl   max-lg:w-full"
+            className=" rounded-3xl  w-full"
           />
           <div className="bg-lightBLue p-5 flex flex-col rounded-3xl  gap-2 grow">
             <h1 className="text-2xl max-lg:text-center">

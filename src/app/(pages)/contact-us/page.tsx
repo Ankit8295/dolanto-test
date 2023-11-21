@@ -12,10 +12,8 @@ export default function Page() {
           alt="map image"
           data-aos="fade-right"
           loading="lazy"
-          objectPosition="center"
           placeholder="blur"
-          objectFit="cover"
-          className="h-full w-full max-sm:h-[400px] "
+          className="h-full w-full object-cover max-sm:aspect-square "
         />
         <div
           data-aos="fade-up"
