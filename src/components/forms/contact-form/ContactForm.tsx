@@ -6,6 +6,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import LoadingSvg from "../../Loader/LoadingSvg";
 import { toast } from "react-toastify";
+import Link from "next/link";
+import { aboutDolantoContact } from "@/src/constants/contactDetail";
 
 type FormDataType = {
   name: string;
@@ -53,9 +55,15 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
         Contact Us
       </span>
       <div className="flex justify-end items-center self-end gap-10 pr-10 max-xl:pr-2 max-xl:gap-5 pb-5">
-        <LinkedinIcon />
-        <FacebookIcon />
-        <InstagramIcon />
+        <Link href={aboutDolantoContact.linkedin} target="_blank">
+          <LinkedinIcon />
+        </Link>
+        <Link href={aboutDolantoContact.facebook} target="_blank">
+          <FacebookIcon />
+        </Link>
+        <Link href={aboutDolantoContact.instagram} target="_blank">
+          <InstagramIcon />
+        </Link>
       </div>
       <form onSubmit={submitHandler} className="w-full flex flex-col gap-5">
         <input

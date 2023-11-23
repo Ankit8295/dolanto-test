@@ -1,5 +1,7 @@
 "use client";
 
+import { aboutDolantoContact } from "@/src/constants/contactDetail";
+import Link from "next/link";
 import { useState } from "react";
 type Props = {
   job: {
@@ -99,9 +101,13 @@ export default function JobDetail({ job }: Props) {
             </ol>
           </div>
           <div className="flex items-center justify-center">
-            <button className="bg-gradient-main  text-white w-fit self-end max-sm:self-center px-4 py-2 rounded-xl">
+            <Link
+              href={aboutDolantoContact.linkedin}
+              target="_blank"
+              className="bg-gradient-main  text-white w-fit self-end max-sm:self-center px-4 py-2 rounded-xl"
+            >
               Apply
-            </button>
+            </Link>
           </div>
         </div>
       )}

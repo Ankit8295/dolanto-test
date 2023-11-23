@@ -287,15 +287,15 @@ const employeeTestimonialData = [
 const dynamicCardData = [
   {
     id: 1,
-    title: "Looking  for a new role? Join the passion",
+    title: "Pre Engineered Building",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt.",
+      "Revolutionize construction with our new Pre-Engineered Building (PEB). Engineered for efficiency and durability, PEB offers a swift and cost-effective solution for modern structures. Say goodbye to traditional construction hassles and embrace the future of streamlined building with our PEB innovation.",
     image: cardImg,
   },
   {
     id: 2,
     title: "You can do anything you set your mind to!",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
     image: cardbImg,
   },
   {
@@ -313,9 +313,10 @@ const dynamicCardData = [
   },
   {
     id: 5,
-    title: "An impressive financial year for Dolanto.",
+    title:
+      "Made-in-India needs to support the laboratory furniture manufacturing sector in our nation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt.",
+      "India's progress has always been a topic of interest for many individuals. Dr. Krishna Ella stated an increased emphasis on the manufacturing of laboratory furniture in India. According to him, this is an area which possesses a huge potential for growth within the country.",
     image: cardeImg,
   },
   {
