@@ -56,7 +56,7 @@ export const jobDetail = [
   {
     title: "Client Relation Executive",
     description: "We’re Looking for a mid-level designer to join our team",
-    department: "Customer Service",
+    department: "Customer Services",
     tags: ["Full-Time"],
     tasks: [
       "Reception, diagnosis and treatment of animals with cardiological diseases",

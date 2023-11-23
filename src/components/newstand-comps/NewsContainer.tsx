@@ -108,13 +108,16 @@ export default function NewsContainer({
                     </span>
                   )}
                 </div>
-                {i === 0 ? (
-                  <h3 className="max-sm:text-xs font-light ">{data.brief}</h3>
-                ) : (
-                  <h3 className="max-sm:text-[10px] font-semibold ">
-                    {data.title}
-                  </h3>
-                )}
+
+                <h3
+                  className={`${
+                    i === 0
+                      ? "text-2xl max-sm:text-[10px] px-2"
+                      : "text-lg max-sm:text-[10px]"
+                  } font-semibold `}
+                >
+                  {data.title}
+                </h3>
                 <div className="flex justify-between items-center w-full">
                   {i === 0 && (
                     <div className="grid grid-cols-[45px_1fr] gap-x-2 items-center">

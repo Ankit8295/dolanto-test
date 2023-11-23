@@ -17,10 +17,6 @@ export default function page() {
         newsData={latestNewsFromDolanto}
         relatedPostData={relatedPostsData}
       />
-      <NewsContainer
-        containerTitle="White paper"
-        newsData={latestNewsFromDolanto}
-      />
       <SocialPostSlider />
       <NewsContainer
         containerTitle="Blogs & Articles"

@@ -1,20 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 type Props = {
-  data: any;
+  data: StaticImageData;
 };
 
 export default function SliderImageComponent({ data }: Props) {
   return (
-    <Image
-      src={data}
-      alt={""}
+    <img
+      src={data.src}
+      alt={"certificates"}
       loading="lazy"
       placeholder="blur"
-      objectFit="cover"
-      objectPosition="center"
-      className=" w-full h-full self-center"
+      className=" w-full h-full object-cover object-center max-h-[500px] max-w-[400px] self-center"
     />
   );
 }

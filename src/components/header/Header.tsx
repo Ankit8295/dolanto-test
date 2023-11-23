@@ -19,7 +19,7 @@ export function Header() {
       <div className="w-[95%] relative max-w-[1750px] mx-auto bg-white  flex items-center max-sm:flex-row-reverse justify-between gap-2 py-3">
         <HamburgerMenu />
         <div className="grow  bg-lightBLue max-sm:bg-white max-sm:p-0 rounded-full p-3">
-          <Link href={routes.home}>
+          <Link href={routes.home} className="max-w-max inline-block">
             <Image
               src={logo}
               alt="logo_dolanto"

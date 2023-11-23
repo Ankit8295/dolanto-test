@@ -13,7 +13,6 @@ type Props = {
     socialLinks: {
       linkedin: string;
       facebook: string;
-      twitter: string;
       instagram: string;
     };
   };
@@ -40,13 +39,13 @@ export default function AboutUsBoardSlide({ data }: Props) {
         </GradientText>
         <span className="text-sm">{data.designation}</span>
         <div className="flex gap-4 pt-2 items-center">
-          <Link href={data.socialLinks.linkedin}>
+          <Link target="_blank" href={data.socialLinks.linkedin}>
             <LinkedinIcon opacity={0.3} />
           </Link>
-          <Link href={data.socialLinks.facebook}>
+          <Link target="_blank" href={data.socialLinks.facebook}>
             <FacebookIcon opacity={0.3} />
           </Link>
-          <Link href={data.socialLinks.instagram}>
+          <Link target="_blank" href={data.socialLinks.instagram}>
             <InstagramIcon opacity={0.3} />
           </Link>
         </div>

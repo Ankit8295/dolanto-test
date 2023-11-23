@@ -2,6 +2,7 @@ import ContactForm from "@/src/components/forms/contact-form/ContactForm";
 import map from "@/public/media/map.png";
 import Image from "next/image";
 import { aboutDolantoContact } from "@/src/constants/contactDetail";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -27,15 +28,21 @@ export default function Page() {
           </div>
           <div className="py-2 px-6 max-sm:px-3 flex flex-col items-start gap-1 grow rounded-xl bg-lightBLue">
             <span className="max-sm:text-sm font-light">Phone:</span>
-            <h2 className="text-[#0045AA] text-xl max-sm:text-base  font-medium">
+            <Link
+              href={`tel:${aboutDolantoContact.phone}`}
+              className="text-[#0045AA] text-xl max-sm:text-base  font-medium"
+            >
               {aboutDolantoContact.phone}
-            </h2>
+            </Link>
           </div>
           <div className="py-2 px-6 max-sm:px-3 flex flex-col items-start gap-1 grow rounded-xl bg-lightBLue">
             <span className="max-sm:text-sm font-light">Support:</span>
-            <h2 className="text-[#0045AA] text-xl max-sm:text-base  font-medium">
+            <Link
+              href={`tel:${aboutDolantoContact.email}`}
+              className="text-[#0045AA] text-xl max-sm:text-base  font-medium"
+            >
               {aboutDolantoContact.email}
-            </h2>
+            </Link>
           </div>
         </div>
       </div>

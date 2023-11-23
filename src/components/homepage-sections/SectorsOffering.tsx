@@ -15,7 +15,7 @@ export default function SectorsOffering({}: Props) {
         data-aos="fade-up"
         className="flex justify-center items-center w-full"
       >
-        <HeadingTag>
+        <HeadingTag customTailwindStyle="!text-center">
           Here’s a glimpse of different sectors Dolanto serves
         </HeadingTag>
       </div>

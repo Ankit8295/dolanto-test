@@ -59,12 +59,12 @@ export default function Footer({}: Props) {
             </div>
             <div className="h-full col-span-1 row-span-2 col-start-2 max-sm:row-start-2  max-sm:row-span-1 max-sm:col-start-1 max-sm:items-start text-white flex flex-col items-end justify-evenly gap-4 font-medium">
               <Link href={routes.home}>Home</Link>
-              <Link href={routes.about_us}>About Us</Link>
-              <Link href={routes.services}>Services</Link>
               <Link href={routes.products}>Products</Link>
-              <Link href={routes.clientele}>Clientele</Link>
-              <Link href={routes.newsstand}>Newsstand</Link>
+              <Link href={routes.services}>Services</Link>
+              <Link href={routes.about_us}>About Us</Link>
               <Link href={routes.careers}>Careers</Link>
+              <Link href={routes.newsstand}>Newsstand</Link>
+              <Link href={routes.clientele}>Clientele</Link>
             </div>
           </div>
           <div className="flex w-full items-center justify-between text-white max-sm:flex-col-reverse max-sm:gap-3 max-sm:items-start">
