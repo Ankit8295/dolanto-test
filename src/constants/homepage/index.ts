@@ -25,7 +25,7 @@ import Cosmetics from "@/public/media/homepage/sectors/Cosmetics.png";
 import Hospitals from "@/public/media/homepage/sectors/Hospitals.png";
 import Infrastructure from "@/public/media/homepage/sectors/Infrastructure.png";
 import Laboratory from "@/public/media/homepage/sectors/Laboratory.png";
-import Microelectronics from "@/public/media/homepage/sectors/Microelectronics.png";
+import Microelectronics from "@/public/media/homepage/sectors/microelectronics.png";
 import food from "@/public/media/homepage/sectors/food.png";
 import medicalDevices from "@/public/media/homepage/sectors/medicalDevices.png";
 import testimonialImgA from "@/public/media/homepage/reviewAbout.png";
