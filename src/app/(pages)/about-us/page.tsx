@@ -17,16 +17,7 @@ export default function Page() {
   return (
     <>
       <PageDescription title="ABOUT US">
-        Established in Thane, Dolanto commenced its journey in __________ with a
-        bold spirit of innovation. While our team brims with passion, we infuse
-        novelty with experience. Dolanto is certainly an agile hub of futuristic
-        designs for cleanroom panels and partitions, Modular OTs, as well as
-        laboratory furniture and fume hoods. Way ahead, our engineers are
-        dedicated to pioneering pre-engineered structures tailored for the
-        discrete needs of the biopharmaceutical, and pharmaceutical sectors and
-        many more. Ensuring the creation of distinctive work, we adhere to
-        protocols right from the nascent stages, to meticulous attention to
-        detail.
+      Established in Thane, Dolanto commenced its journey in 2023 with a bold spirit of innovation. While our team brims with passion, we infuse novelty with experience. Dolanto is certainly an agile hub of futuristic designs for cleanroom panels, Modular OTs, as well as laboratory furniture and fume hoods. Way ahead, our engineers are dedicated to pioneering pre-engineered structures catering to diverse industries. Ensuring the creation of distinctive work, we adhere to protocols right from the nascent stages, to meticulous attention to detail.
       </PageDescription>
       <AboutUsCards image={story} title="Our Story">
         Since 2023, Dolanto has emerged with the synergy between two sister
