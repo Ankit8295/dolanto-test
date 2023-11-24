@@ -28,12 +28,12 @@ export default function Footer({}: Props) {
           wide ? "" : "max-lg:grid-rows-[auto]"
         }`}
       >
-        <div className="col-span-2 max-lg:row-start-2 max-sm:col-span-1 max-lg:rounded-none bg-footerColor w-full max-lg:w-full flex flex-col justify-between p-10 max-sm:p-5 rounded-3xl h-full">
-          <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:grid-rows-[auto] grid-rows-2 w-full pb-5 max-sm:gap-10">
+        <div className="col-span-2 max-lg:row-start-2 max-lg:col-span-1 max-lg:rounded-none bg-footerColor w-full max-lg:w-full flex flex-col justify-between p-10 max-lg:p-5 rounded-3xl h-full">
+          <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:grid-rows-[auto] grid-rows-[150px_1fr] w-full pb-5 max-lg:gap-10">
             <div className="text-white col-span-1 row-start-1 w-full">
               <Image src={logo} alt={"dolanto logo"} width={150} height={100} />
             </div>
-            <div className="row-start-2 max-sm:col-span-1 max-sm:w-full max-sm:row-start-3 text-white flex flex-col items-start gap-3 font-medium">
+            <div className="row-start-2 max-lg:col-span-1 max-lg:w-full max-lg:row-start-3  text-white flex flex-col items-start gap-3 font-medium">
               <div>
                 <p className="text-sm font-medium text-[#0045AA] leading-6">
                   Address:{" "}
@@ -57,20 +57,41 @@ export default function Footer({}: Props) {
                 </Link>
               </div>
             </div>
-            <div className="h-full col-span-1 row-span-2 col-start-2 max-sm:row-start-2  max-sm:row-span-1 max-sm:col-start-1 max-sm:items-start text-white flex flex-col items-end justify-evenly gap-4 font-medium">
-              <Link href={routes.home}>Home</Link>
-              <Link href={routes.products}>Products</Link>
-              <Link href={routes.services}>Services</Link>
-              <Link href={routes.about_us}>About Us</Link>
-              <Link href={routes.careers}>Careers</Link>
-              <Link href={routes.newsstand}>Newsstand</Link>
-              <Link href={routes.clientele}>Clientele</Link>
+            <div className="h-full col-span-1 row-span-2 col-start-2 max-lg:row-start-2  max-lg:row-span-1 max-lg:col-start-1 max-lg:items-start text-white flex flex-col items-end pr-10 text-start justify-evenly gap-4 font-medium">
+              <Link className="w-1/3 text-start" href={routes.home}>
+                Home
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.products}>
+                Products
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.services}>
+                Services
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.about_us}>
+                About Us
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.careers}>
+                Careers
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.newsstand}>
+                Newsstand
+              </Link>
+              <Link className="w-1/3 text-start" href={routes.clientele}>
+                Clientele
+              </Link>
             </div>
           </div>
-          <div className="flex w-full items-center justify-between text-white max-sm:flex-col-reverse max-sm:gap-3 max-sm:items-start">
-            <span className="text-xs">© 2021 All Rights Reserved</span>
-            <div className="flex gap-4 items-center justify-end text-xs">
-              <Link href={routes.user_policy}>User Policy</Link>
+          <div className="grid max-lg:grid-cols-1 w-full items-center grid-cols-2 text-white  ">
+            <div className="flex max-lg:row-start-2 flex-col items-start font-light text-[#F1F7FF]">
+              <span className="text-xs">Powered by Digilligent</span>
+              <span className="text-xs">
+                © All Rights Reserved by Dolanto Engineering Private Limited ®
+              </span>
+            </div>
+            <div className="flex max-lg:row-start-1 items-end pr-10 justify-end text-xs max-lg:justify-start max-lg:pb-5">
+              <Link className="w-1/3 text-start" href={routes.user_policy}>
+                User Policy
+              </Link>
             </div>
           </div>
         </div>

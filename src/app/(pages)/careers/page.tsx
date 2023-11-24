@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { GradientText, HeadingTag } from "@/src/components/tags/Tags";
+import {
+  BgGradientText,
+  GradientText,
+  HeadingTag,
+} from "@/src/components/tags/Tags";
 import careersImg from "@/public/media/careers/careers.webp";
 import Image from "next/image";
 import { careerCard2Data, careerCardData } from "@/src/constants/career";
@@ -49,8 +53,8 @@ export default function Page() {
         >
           <HeadingTag>
             We constantly scout talent who dream in
-            <GradientText> Developing</GradientText> their{" "}
-            <GradientText>Career.</GradientText>
+            <BgGradientText> Developing</BgGradientText> their{" "}
+            <BgGradientText>Career.</BgGradientText>
           </HeadingTag>
           <div className="grid grid-cols-4 gap-x-3 max-sm:gap-2 items-center">
             {careerCardData.map((card) => (

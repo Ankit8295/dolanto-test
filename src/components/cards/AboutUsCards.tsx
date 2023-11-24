@@ -36,7 +36,7 @@ export default function AboutUsCards({
           placeholder="blur"
           objectFit="cover"
           objectPosition="center"
-          className="w-full h-full"
+          className="w-full h-full max-h-[500px]"
         />
       </div>
       <div
@@ -47,7 +47,7 @@ export default function AboutUsCards({
         <h2 className="bg-footerColor max-lg:hidden rounded-xl py-2 px-4 text-white text-sm  text-center w-fit">
           {title}
         </h2>
-        <p className="  xl:text-xl text-base 2xl:leading-relaxed lg:text-start 2xl:text-3xl font-light  text-center">
+        <p className="xl:text-lg text-base 2xl:leading-relaxed lg:text-start 2xl:text-2xl font-light  text-center">
           {children}
         </p>
         <svg

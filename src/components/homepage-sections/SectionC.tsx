@@ -5,7 +5,7 @@ import {
 } from "@/src/constants/homepage";
 import Image from "next/image";
 import React from "react";
-import { GradientText, HeadingTag } from "../tags/Tags";
+import { BgGradientText, GradientText, HeadingTag } from "../tags/Tags";
 import { BlueButtonWrapper } from "../buttons/Buttons";
 import {
   useAppState,
@@ -25,12 +25,12 @@ export default function SectionC({}: Props) {
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-offset="0"
-          className="w-full flex flex-col items-start gap-2"
+          className="w-full flex flex-col items-start gap-1"
         >
           <BlueButtonWrapper>Products & Services</BlueButtonWrapper>
           <HeadingTag>
             We offer Top-notch Services with{" "}
-            <GradientText>Incredible Quality</GradientText> to various
+            <BgGradientText>Incredible Quality</BgGradientText> to various
             Industries
           </HeadingTag>
         </div>
@@ -38,7 +38,7 @@ export default function SectionC({}: Props) {
           <div
             data-aos="fade-right"
             className={
-              "bg-[url('/media/homepage/formulation.png')] pt-[15%] max-sm:pt-[25%] rounded-3xl w-[48%] max-lg:w-full bg-cover bg-center p-5 flex flex-col  "
+              "bg-[url('/media/homepage/formulation.png')] aspect-video pt-[15%] max-sm:pt-[25%] rounded-3xl w-[48%]  max-lg:w-full bg-cover bg-center p-5 flex flex-col  "
             }
           >
             <div className="bg-black/20 p-4 rounded-3xl backdrop-blur-sm border border-white/70">

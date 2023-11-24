@@ -16,11 +16,14 @@ export default function FaqList({ ans, qs }: Props) {
   };
 
   return (
-    <details open={open} className="w-full p-2 text-lg bg-white rounded-xl ">
+    <details
+      open={open}
+      className="w-full group p-2 text-lg bg-white rounded-xl "
+    >
       <summary>
         <div
           onClick={handleOpen}
-          className="grid grid-cols-[1fr_30px] items-center cursor-pointer"
+          className="grid grid-cols-[1fr_30px] items-center  cursor-pointer"
         >
           <GradientText
             showGradient={open === true ? true : false}

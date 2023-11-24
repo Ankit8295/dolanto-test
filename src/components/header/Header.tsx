@@ -32,7 +32,7 @@ export function Header() {
           </Link>
         </div>
         <Link href={routes.contact_us}>
-          <GradientButtonWrapper customStyles="max-sm:hidden font-medium text-lg leading-none ">
+          <GradientButtonWrapper customStyles="max-sm:hidden font-medium text-sm py-4 px-7 leading-none ">
             Contact Us
           </GradientButtonWrapper>
         </Link>

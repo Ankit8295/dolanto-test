@@ -36,7 +36,7 @@ export default function OurServicesCards({
           placeholder="blur"
           objectFit="cover"
           objectPosition="center"
-          className="w-full h-full"
+          className="w-full h-full max-h-[550px]"
         />
       </div>
       <div
@@ -47,7 +47,7 @@ export default function OurServicesCards({
         <h2 className="max-lg:hidden text-[#001942] xl:text-4xl  max-xl:text-2xl font-medium 2xl:text-5xl">
           {title}
         </h2>
-        <p className="xl:text-xl text-base 2xl:leading-relaxed lg:text-start 2xl:text-3xl font-light  text-center">
+        <p className="xl:text-lg text-base 2xl:leading-relaxed lg:text-start 2xl:text-2xl font-light  text-center">
           {children}
         </p>
         <svg

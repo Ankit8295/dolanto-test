@@ -16,7 +16,7 @@ import vision from "@/public/media/about-us/vision.webp";
 export default function Page() {
   return (
     <>
-      <PageDescription title="ABOUT US">
+      <PageDescription title="ABOUT Dolanto">
         Established in Thane, Dolanto commenced its journey in 2023 with a bold
         spirit of innovation. While our team brims with passion, we infuse
         novelty with experience. Dolanto is certainly an agile hub of futuristic
@@ -92,18 +92,9 @@ export default function Page() {
         </button>
       </div>
       <div className="max-[1750px]:max-w-[90vw] max-w-[1750px] relative mx-auto flex flex-col items-center gap-8">
-        <div className="w-full flex flex-col items-center">
-          <HeadingTag customTailwindStyle=" w-full flex items-center justify-center">
-            <GradientText customTailwindStyle="text-center font-bold">
-              “MEET THE BOARD BEHIND THE SUCCESS”
-            </GradientText>
-          </HeadingTag>
-          <p className="text-center w-[70%] mx-auto max-sm:w-full">
-            Our team is comprised of experienced architects, designers, and
-            project managers who share a common goal of creating exceptional
-            spaces.
-          </p>
-        </div>
+        <HeadingTag customTailwindStyle=" w-full flex items-center justify-center text-[#001942]">
+          “MEET THE BOARD BEHIND THE SUCCESS”
+        </HeadingTag>
         <Swiper
           slidesPerView={1}
           navigation={{

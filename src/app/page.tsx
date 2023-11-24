@@ -21,7 +21,7 @@ export default function Page() {
       <CardsSection />
       <div className="w-full flex justify-between max-lg:flex-col-reverse max-lg:gap-10">
         <div className="w-[49%] max-lg:w-full rounded-xl bg-lightBLue p-5 flex flex-col items-start gap-5">
-          <div className="bg-darkBlue text-white rounded-xl py-1 px-3 text-sm font-medium">
+          <div className="bg-darkBlue text-[#F1F7FF] rounded-xl py-2 px-3 text-xs ">
             FAQ
           </div>
           <div className="flex w-full flex-col gap-2">
@@ -31,7 +31,7 @@ export default function Page() {
           </div>
         </div>
         <div className="w-[49%] max-lg:w-full  rounded-xl flex flex-col items-start gap-5 bg-lightBLue p-5">
-          <div className="bg-darkBlue text-white rounded-xl py-1 px-3 text-sm font-medium">
+          <div className="bg-darkBlue text-[#F1F7FF] rounded-xl py-2 px-3 text-xs ">
             Certificates
           </div>
           <AutoSliderCard

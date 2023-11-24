@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { BlueButtonWrapper, LinkButton } from "../buttons/Buttons";
-import { GradientText, HeadingTag } from "../tags/Tags";
+import { BgGradientText, GradientText, HeadingTag } from "../tags/Tags";
 import { DownloadButtonIcon } from "../icons/Icons";
-import aboutImg from "@/public/media/homepage/home_about.png";
+import aboutImg from "@/public/media/homepage/home_about2.png";
 import aboutClientImg from "@/public/media/homepage/home_aboutClient.png";
 import { homeAboutCards, userTestimonialData } from "@/src/constants/homepage";
 import { routes } from "@/src/constants/routes";
@@ -34,8 +34,8 @@ export default function SectionB() {
         <BlueButtonWrapper>About Us</BlueButtonWrapper>
         <HeadingTag>
           With every Client, our{" "}
-          <GradientText>Expertise in Fabrication</GradientText> unveils a Fresh
-          Perspective
+          <BgGradientText>Expertise in Fabrication</BgGradientText> unveils a
+          Fresh Perspective
         </HeadingTag>
         <Image
           src={aboutClientImg}
@@ -60,8 +60,9 @@ export default function SectionB() {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        className="max-xl:order-3 col-start-2 col-end-5 row-start-3 row-end-4 xl:flex gap-5 grid grid-cols-2  bg-white xl:pl-5 xl:pt-5 rounded-t-3xl"
+        className="max-xl:order-3 relative col-start-2 col-end-5 row-start-3 row-end-4 xl:flex gap-5 grid grid-cols-2  bg-white xl:pl-5 xl:pt-5 rounded-t-3xl"
       >
+        <div className="absolute w-1/3 bg-transparent h-1/4 bottom-0 rounded-br-[35px] shadow-[3px_18px_white]  -translate-x-full left-0"></div>
         {homeAboutCards.map((textCard, index) => (
           <div
             key={textCard.title}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { BlueButtonWrapper, LinkButton } from "../buttons/Buttons";
 import { DownloadButtonIcon, TiltArrow } from "../icons/Icons";
-import { GradientText, HeadingTag } from "../tags/Tags";
+import { BgGradientText, HeadingTag } from "../tags/Tags";
 import { routes } from "@/src/constants/routes";
 
 export default function HeroSection() {
@@ -13,11 +13,11 @@ export default function HeroSection() {
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-offset="0"
-        className="col-span-2 flex justify-between flex-col pb-4 max-sm:pb-0"
+        className="col-span-2 flex gap-5 flex-col pb-4 max-sm:pb-0"
       >
         <HeadingTag>
-          Presenting <GradientText>Engineering Prowess</GradientText> with a Key
-          Focus on Details
+          Presenting <BgGradientText>Engineering Prowess</BgGradientText> with a
+          Key Focus on Details
         </HeadingTag>
         <div className="flex gap-5 max-sm:hidden w-fit whitespace-nowrap">
           <LinkButton
