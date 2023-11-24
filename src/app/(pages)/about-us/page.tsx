@@ -16,7 +16,7 @@ import vision from "@/public/media/about-us/vision.webp";
 export default function Page() {
   return (
     <>
-      <PageDescription title="ABOUT Dolanto">
+      <PageDescription title="ABOUT DOLANTO">
         Established in Thane, Dolanto commenced its journey in 2023 with a bold
         spirit of innovation. While our team brims with passion, we infuse
         novelty with experience. Dolanto is certainly an agile hub of futuristic
