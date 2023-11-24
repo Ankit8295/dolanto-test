@@ -3,12 +3,7 @@ import Image, { StaticImageData } from "next/image";
 type CardData = {
   id: string;
   image: StaticImageData;
-  clientName: string;
   location: string;
-  date: string;
-  concept: {
-    products: string;
-  };
 };
 type Props = {
   card: CardData;
