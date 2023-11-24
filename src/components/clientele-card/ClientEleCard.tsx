@@ -13,7 +13,7 @@ export default function ClientEleCard({ card }: Props) {
   return (
     <div
       data-aos="fade-up"
-      className="w-[285px] max-lg:w-full p-5 min-h-[250px] flex flex-col justify-between items-center  bg-lightBLue h-full"
+      className="w-full max-sm:max-w-[300px]  max-lg:w-full p-5 aspect-square flex flex-col justify-between items-center  bg-lightBLue h-full"
     >
       <div className="w-full grow  flex items-center justify-center">
         <Image
@@ -24,14 +24,14 @@ export default function ClientEleCard({ card }: Props) {
           loading="lazy"
           placeholder="blur"
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="center "
         />
       </div>
       <div className="py-2 rounded-xl text-sm font-medium bg-white px-5">
         <p className="flex items-center gap-2">
           <svg
-            width="24"
-            height="26"
+            width="20"
+            height="20"
             viewBox="0 0 24 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,9 @@ export default function ClientEleCard({ card }: Props) {
               fill="#001942"
             />
           </svg>
-          <span className="font-normal">{card.location}</span>
+          <span className="font-normal text-sm whitespace-nowrap max-xl:text-xs">
+            {card.location}
+          </span>
         </p>
       </div>
     </div>
