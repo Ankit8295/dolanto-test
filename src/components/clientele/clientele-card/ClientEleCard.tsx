@@ -1,15 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { ClienteleType } from "../ClientEle";
 
-type CardData = {
-  id: string;
-  image: StaticImageData;
-  location: string;
-};
 type Props = {
-  card: CardData;
+  client: ClienteleType;
 };
 
-export default function ClientEleCard({ card }: Props) {
+export default function ClientEleCard({ client }: Props) {
   return (
     <div
       data-aos="fade-up"
@@ -19,12 +15,10 @@ export default function ClientEleCard({ card }: Props) {
         <Image
           width={130}
           height={130}
-          alt={card.id}
-          src={card.image}
+          alt={client.client_name}
+          src={client.image}
           loading="lazy"
-          placeholder="blur"
-          objectFit="cover"
-          objectPosition="center "
+          className="aspect-video w-full mix-blend-multiply"
         />
       </div>
       <div className="py-2 rounded-xl text-sm font-medium bg-white px-5">
@@ -42,7 +36,7 @@ export default function ClientEleCard({ card }: Props) {
             />
           </svg>
           <span className="font-normal text-sm whitespace-nowrap max-xl:text-xs">
-            {card.location}
+            {client.location}
           </span>
         </p>
       </div>

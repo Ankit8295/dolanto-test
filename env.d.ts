@@ -1,9 +1,6 @@
 namespace NodeJS {
   interface ProcessEnv {
-    PGSQL_HOST: string;
-    PGSQL_PORT: number;
-    PGSQL_DATABASE: string;
-    PGSQL_USER: string;
-    PGSQL_PASSWORD: string;
+    NEXT_PUBLIC_SUPABASE_URL: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
   }
 }
