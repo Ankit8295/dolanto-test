@@ -7,6 +7,7 @@ export const revalidate = 0;
 
 export default async function page() {
   let { data: clientele, error } = await supabase.from("clientele").select("*");
+
   return (
     <div className="flex flex-col gap-10">
       <PageDescription title="CLIENTELE">
@@ -17,7 +18,7 @@ export default async function page() {
         portrayed our ability to design and manufacture lab furniture with the
         requirements in mind.
       </PageDescription>
-      {clientele.length ? (
+      {clientele ? (
         <Clientele clientData={clientele} />
       ) : (
         <GradientText customTailwindStyle="font-semibold text-2xl w-full text-center">
