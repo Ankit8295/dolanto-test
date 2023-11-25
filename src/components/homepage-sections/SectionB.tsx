@@ -68,6 +68,7 @@ export default function SectionB() {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
+        data-aos-duration="200"
         className="max-xl:order-3 relative col-start-2 col-end-5 row-start-3 row-end-4 xl:flex gap-5 grid grid-cols-2  bg-white xl:pl-5 xl:pt-5 rounded-t-3xl"
       >
         <div className="absolute w-1/3 bg-transparent h-1/4 bottom-0 rounded-br-[35px] shadow-[3px_18px_white]  -translate-x-full left-0"></div>
@@ -81,10 +82,10 @@ export default function SectionB() {
             <GradientText customTailwindStyle="text-[40px]   font-medium ">
               {textCard?.title}
             </GradientText>
-            <GradientText customTailwindStyle="max-md:text-xs">
+            <GradientText customTailwindStyle="max-md:text-xs !text-lg">
               {textCard?.subTitle}
             </GradientText>
-            <span className="text-xs max-md:text-[11px]">
+            <span className="text-sm max-md:text-[12px]">
               {textCard?.description}
             </span>
           </div>

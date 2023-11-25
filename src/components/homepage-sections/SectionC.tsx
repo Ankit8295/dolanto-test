@@ -28,7 +28,7 @@ export default function SectionC({}: Props) {
           className="w-full flex flex-col items-start gap-1"
         >
           <BlueButtonWrapper>Products & Services</BlueButtonWrapper>
-          <HeadingTag>
+          <HeadingTag customTailwindStyle="!text-[43px] !leading-[140%]">
             We offer Top-notch Services with{" "}
             <BgGradientText>Incredible Quality</BgGradientText> to various
             Industries
