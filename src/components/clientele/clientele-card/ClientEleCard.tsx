@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { ClienteleType } from "../ClientEle";
 
@@ -12,12 +13,13 @@ export default function ClientEleCard({ client }: Props) {
       className="w-full max-sm:max-w-[300px]  max-lg:w-full p-5 aspect-square flex flex-col justify-between items-center  bg-lightBLue h-full"
     >
       <div className="w-full grow  flex items-center justify-center">
-        <Image
+        <img
           width={130}
           height={130}
           alt={client.client_name}
           src={client.image}
           loading="lazy"
+          placeholder="blur"
           className="aspect-video w-full mix-blend-multiply"
         />
       </div>

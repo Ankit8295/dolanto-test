@@ -18,7 +18,7 @@ type Props = {
 export default function Clientele({ clientData }: Props) {
   const data = useMemo(() => {
     return clientData;
-  }, []);
+  }, [clientData]);
 
   const [currProduct, setCurrProduct] = useState("");
   const [products, setProducts] = useState(data);
@@ -28,7 +28,7 @@ export default function Clientele({ clientData }: Props) {
       return setProducts(data.filter((data) => data.category === currProduct));
     }
     setProducts(clientData);
-  }, [currProduct, data]);
+  }, [currProduct, data, clientData]);
 
   return (
     <>
@@ -75,7 +75,6 @@ export default function Clientele({ clientData }: Props) {
         </div>
       </div>
       <div className="w-full grid grid-cols-4 gap-5 max-sm:justify-items-center  max-lg:grid-cols-2 max-sm:grid-cols-1">
-        {/* <div className="w-full flex items-start flex-wrap max-lg:flex-col justify-between gap-10 max-lg:gap-10"> */}
         {products.map((product) => (
           <ClientEleCard key={product.id} client={product} />
         ))}
