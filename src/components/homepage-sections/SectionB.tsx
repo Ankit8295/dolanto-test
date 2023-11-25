@@ -4,6 +4,7 @@ import { BlueButtonWrapper, LinkButton } from "../buttons/Buttons";
 import { BgGradientText, GradientText, HeadingTag } from "../tags/Tags";
 import { DownloadButtonIcon } from "../icons/Icons";
 import aboutImg from "@/public/media/homepage/home_about2.png";
+import aboutImgMobile from "@/public/media/homepage/home_about.png";
 import aboutClientImg from "@/public/media/homepage/home_aboutClient.png";
 import { homeAboutCards, userTestimonialData } from "@/src/constants/homepage";
 import { routes } from "@/src/constants/routes";
@@ -22,7 +23,14 @@ export default function SectionB() {
           placeholder="blur"
           quality={100}
           alt={"dolanto about image"}
-          className="h-full w-full rounded-3xl"
+          className="h-full w-full rounded-3xl max-lg:hidden"
+        />
+        <Image
+          src={aboutImgMobile}
+          placeholder="blur"
+          quality={100}
+          alt={"dolanto about image"}
+          className="h-full w-full rounded-3xl max-lg:block hidden"
         />
       </div>
       <div
