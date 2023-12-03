@@ -35,29 +35,5 @@ export default function HamburgerMenu() {
         <div className="bars" id="bar3"></div>
       </label>
     </nav>
-
-    // <div
-    //   onClick={() => setOpenMenu(!openMenu)}
-    //   className="cursor-pointer w-[50px] h-[50px] flex justify-center items-center flex-col gap-1 rounded-full bg-lightBLue"
-    // >
-    //   <div
-    //     className={`w-[30px] rounded-full h-[.25rem] duration-300  bg-gradient-main transition-all ${
-    //       openMenu ? "rotate-45 origin-center" : ""
-    //     }`}
-    //   ></div>
-    //   <div
-    //     className={`w-[30px] flex items-center justify-between transition-all ${
-    //       openMenu ? "invisible" : ""
-    //     }`}
-    //   >
-    //     <div className="w-[14px] rounded-full h-[.25rem] bg-gradient-main"></div>
-    //     <div className="w-[14px] rounded-full h-[.25rem] bg-gradient-main"></div>
-    //   </div>
-    //   <div
-    //     className={`w-[30px] rounded-full h-[.25rem]  duration-300 bg-gradient-main transition-all ${
-    //       openMenu ? "-rotate-45 origin-center" : ""
-    //     }`}
-    //   ></div>
-    // </div>
   );
 }

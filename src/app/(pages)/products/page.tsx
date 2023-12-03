@@ -95,7 +95,12 @@ export default function page() {
               className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
             <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
-              <h1 className="text-2xl max-lg:text-center">Merchandising</h1>
+              <Link
+                href={"/products/merchandising"}
+                className="text-2xl max-lg:text-center"
+              >
+                Merchandising
+              </Link>
               <span>
                 Dolanto provides different cleanroom sandwich panels with
                 excellent performance, factory prefabrication, field splicing
@@ -110,7 +115,12 @@ export default function page() {
               className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
             <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
-              <h1 className="text-2xl max-lg:text-center">Facades</h1>
+              <Link
+                href={"/products/facades"}
+                className="text-2xl max-lg:text-center"
+              >
+                Facades
+              </Link>
               <span>
                 Dolanto provides different cleanroom sandwich panels with
                 excellent performance, factory prefabrication, field splicing
@@ -125,13 +135,36 @@ export default function page() {
               className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
             />
             <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
-              <h1 className="text-2xl max-lg:text-center">
+              <Link
+                href={"/products/pre-engineered-building"}
+                className="text-2xl max-lg:text-center"
+              >
                 Pre Engineered Building
-              </h1>
+              </Link>
               <span>
                 Dolanto provides different cleanroom sandwich panels with
                 excellent performance, factory prefabrication, field splicing
                 and simple module installation functions.
+              </span>
+            </div>
+          </div>
+          <div className="flex max-lg:flex-col-reverse gap-5 h-full">
+            <Image
+              src={facades}
+              alt="Condition Storages"
+              className=" rounded-3xl   max-lg:w-full w-1/2 h-[250px]"
+            />
+            <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
+              <Link
+                href={"/products/blood-bank-equipments"}
+                className="text-2xl max-lg:text-center"
+              >
+                Blood Bank Equipment
+              </Link>
+              <span>
+                Dolanto specializes in producing essential blood equipment for
+                hospitals and blood banks. Our meticulous design process adheres
+                to industry standards, ensuring accurate readings.
               </span>
             </div>
           </div>
