@@ -62,9 +62,9 @@ export default function page() {
           <Image
             src={conditionStorages}
             alt="Condition Storages"
-            className=" rounded-3xl  w-full"
+            className=" rounded-3xl  w-full h-full"
           />
-          <div className="bg-lightBLue p-5 flex flex-col rounded-3xl  gap-2 grow">
+          <div className="bg-lightBLue min-h-[40%] p-5 flex flex-col rounded-3xl  gap-4 grow">
             <h1 className="text-2xl max-lg:text-center">
               Conditioned Storages
             </h1>
@@ -73,7 +73,7 @@ export default function page() {
               excellent performance, factory prefabrication, field splicing and
               simple module installation functions.
             </span>
-            <div className="grid grid-cols-2 gap-3 justify-between   pt-5">
+            <div className="grid grid-cols-1 gap-3 pt-5">
               {conditionedStoragesProducts.map((products) => (
                 <Link
                   className=" text-start  max-xl:text-sm"

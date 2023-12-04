@@ -13,7 +13,6 @@ export default function page() {
         While our team designs the equipment meticulously, we ensure that it’s
         designed as per the standards and they show accurate reading.
       </PageDescription>
-      <Link href={"blood-bank-equipments/blood"}>Blodbank</Link>
       <div className="w-full grid grid-cols-4 max-xl:gap-10 gap-20 py-20">
         <ProductTitleImage image={bbimage} title="Plasma expressor" />
         <ProductTitleImage image={bbimage} title="Plasma expressor" />

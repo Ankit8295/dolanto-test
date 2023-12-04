@@ -32,7 +32,7 @@ export default function BreadCrumbs({}: Props) {
           <Link
             key={path}
             href={path || "/"}
-            className="capitalize text-[#001942]"
+            className="capitalize text-sm text-[#001942] max-sm:text-[10px]"
           >
             {path === ""
               ? "Home"
@@ -44,7 +44,7 @@ export default function BreadCrumbs({}: Props) {
           {index < breads.length - 1 ? "" : ">"}
         </>
       ))}
-      <span className="capitalize text-sm text-[#001942] font-light cursor-pointer">
+      <span className="capitalize text-sm max-sm:text-[10px] text-[#001942] font-light cursor-pointer">
         {breads[breads.length - 1]
           .split("/")
           [breads[breads.length - 1].split("/").length - 1].split("-")
