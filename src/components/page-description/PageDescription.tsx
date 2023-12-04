@@ -1,5 +1,6 @@
 import React from "react";
 import { GradientText } from "../tags/Tags";
+import BreadCrumbs from "../breadcrumbs/BreadCrumbs";
 
 type Props = {
   title: string;
@@ -9,6 +10,7 @@ type Props = {
 export default function PageDescription({ children, title }: Props) {
   return (
     <div className="flex flex-col items-center gap-5 py-7 rounded-3xl bg-lightBLue">
+      <BreadCrumbs />
       <h1 className="text-6xl max-lg:text-3xl font-semibold">
         <GradientText>{title}</GradientText>
       </h1>
