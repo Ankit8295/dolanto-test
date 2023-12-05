@@ -30,7 +30,7 @@ export default function BreadCrumbs({}: Props) {
       {myBreads.map((path, index) => (
         <>
           <Link
-            key={path}
+            key={index}
             href={path || "/"}
             className="capitalize text-sm text-[#001942] max-sm:text-[10px]"
           >
