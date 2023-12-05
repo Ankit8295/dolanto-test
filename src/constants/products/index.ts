@@ -6,7 +6,7 @@ const fabricationProducts = [
   { name: "Accessories", link: "accessories" },
 
   { name: "Fume Hood", link: "fume-hood" },
-  { name: "Doors", link: "doors" },
+  { name: "Doors", link: "cleanroom-doors" },
   { name: "SS Furniture", link: "ss-furniture" },
   { name: "Modular OT", link: "modular-ot" },
   { name: "Type of Lab Furniture", link: "type-of-lab-furniture" },
