@@ -66,7 +66,7 @@ export default function page({}: Props) {
               One of the most reliable methods of access control available to
               site security managers is an interlocking door.
             </h3>
-            <p className="">
+            <p className="max-md:text-sm">
               In a regulated environment, such as a cleanroom, interlocking
               systems are designed to provide a safe, efficient, and convenient
               means of opening and closing doors. The doors in cleanrooms with

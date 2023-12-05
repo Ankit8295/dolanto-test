@@ -35,7 +35,7 @@ export default function ProductImageComp({ data, reverse = false }: Props) {
             ))}
           </div>
         ) : (
-          <p className="font-light text-xl">{desc}</p>
+          <p className="font-light text-xl max-md:text-sm">{desc}</p>
         )}
       </div>
       <img
