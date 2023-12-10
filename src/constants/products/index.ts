@@ -9,10 +9,10 @@ const fabricationProducts = [
   { name: "Doors", link: "cleanroom-doors" },
   { name: "SS Furniture", link: "ss-furniture" },
   { name: "Modular OT", link: "modular-ot" },
-  { name: "Type of Lab Furniture", link: "type-of-lab-furniture" },
+  { name: "Lab Furniture", link: "lab-furniture" },
   {
-    name: "Ancillaries-Anti-Vibration-Table",
-    link: "ancillaries-&-anti-vibration-table",
+    name: "Ancillaries",
+    link: "ancillaries",
   },
   {
     name: "Bio-Pharmaceutical Equipment",

@@ -3,6 +3,7 @@ import PageDescription from "@/src/components/page-description/PageDescription";
 import ProductHeading from "@/src/components/products-components/products-heading/ProductHeading";
 import mainImg from "@/public/media/products/doors/doormain.png";
 import doorAccessories from "@/public/media/products/doors/doorAccessories.png";
+import insulationA from "@/public/media/products/doors/insulationA.png";
 import { doorsData } from "@/src/constants/products/doors";
 import ProductImageComp from "@/src/components/products-components/product-image-comp/ProductImageComp";
 
@@ -94,6 +95,33 @@ export default function page({}: Props) {
         </div>
       </div>
       <ProductHeading title="Insulation" />
+      <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="flex flex-col gap-2 p-4">
+          <img
+            alt="insulation img"
+            src={insulationA.src}
+            className="w-full h-full"
+            loading="lazy"
+          />
+          <h3>POLYURETHANE (PUF)</h3>
+          <p>
+            Slab of expanded polyurethane foam, composites of polyol and
+            isocyanate.
+          </p>
+          <p>
+            <span>Density</span>
+            <span>42±2</span>
+          </p>
+          <p>
+            <span>Fire reaction class</span>
+            <span>B3</span>
+          </p>
+          <p>
+            <span>Declared thermal conductivity (λ)</span>
+            <span>0.022 W/mK (EN 12667)</span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

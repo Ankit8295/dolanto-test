@@ -4,7 +4,7 @@ import { StaticImageData } from "next/image";
 
 type Props = {
   data: {
-    img: StaticImageData;
+    img: StaticImageData | string;
     title: string;
     desc: string | string[];
   };
@@ -40,7 +40,7 @@ export default function ProductImageComp({ data, reverse = false }: Props) {
       </div>
       <img
         alt={title + "image"}
-        src={img.src}
+        src={typeof img === "string" ? img : img.src}
         className={`${
           reverse ? "col-start-1" : "col-start-2  max-lg:col-start-1"
         } w-full h-full max-h-[600px] row-start-1 max-lg:row-start-2`}

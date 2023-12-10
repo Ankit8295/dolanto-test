@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import cardImg from "@/public/media/homepage/cardA.png";
 import { dynamicCardData } from "@/src/constants/homepage";
 
