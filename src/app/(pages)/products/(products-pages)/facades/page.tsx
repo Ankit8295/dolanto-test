@@ -1,6 +1,6 @@
+import { facadesData } from "@/src/constants/products/facades";
 import PageDescription from "@/src/components/page-description/PageDescription";
 import ProductImageComp from "@/src/components/products-components/product-image-comp/ProductImageComp";
-import { facadesData } from "@/src/constants/products/facades";
 
 export default function page() {
   return (

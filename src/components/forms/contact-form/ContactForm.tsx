@@ -1,9 +1,7 @@
 "use client";
 import { ChangeEvent, useState } from "react";
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "../../icons/Icons";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { useForm } from "react-hook-form";
 import LoadingSvg from "../../Loader/LoadingSvg";
 import { toast } from "react-toastify";
 import Link from "next/link";
@@ -17,14 +15,6 @@ type FormDataType = {
   file?: File;
 };
 
-// const formValidationSchema = yup.object().shape({
-//   name: yup.string().required("Name is required"),
-//   companyName: yup.string().required("Company name is required"),
-//   email: yup.string().email("Invalid email").required("Email is required"),
-//   message: yup.string().required("Message is required"),
-//   file: yup.mixed().notRequired(),
-// });
-
 export default function ContactForm({ gradient }: { gradient?: boolean }) {
   const [file, setFile] = useState<File | null>(null);
   const [sending, setSending] = useState<boolean>(false);
@@ -33,9 +23,7 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
-    // resolver: yupResolver(formValidationSchema),
-  });
+  } = useForm({});
 
   const submitHandler = handleSubmit((data) => {
     setSending(true);

@@ -1,19 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
-// import { getData } from "@/src/lib/queries";
-// import { useQuery } from "@tanstack/react-query";
 import cardImg from "@/public/media/homepage/cardA.png";
-
 import { dynamicCardData } from "@/src/constants/homepage";
 
 export default function CardsSection() {
-  //   const { data, isLoading } = useQuery({
-  //     queryKey: ["homepageData"],
-  //     queryFn: () => getData(),
-  //     refetchOnMount: true,
-  //     refetchOnWindowFocus: false,
-  //   });
-  //   if (isLoading) return <h2>Loading....</h2>;
   return (
     <div className="w-full grid grid-cols-2 max-lg:grid-rows-[auto] gap-x-5 max-lg:gap-x-0 max-lg:gap-y-5 max-lg:grid-cols-1">
       <div className="flex flex-wrap gap-5 max-lg:gap-3">

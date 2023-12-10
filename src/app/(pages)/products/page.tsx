@@ -46,7 +46,7 @@ export default function page() {
           <div className="w-full grid grid-cols-3 gap-x-3 gap-y-3 max-xl:gap-y-1 max-xl:pt-2  pt-3">
             {fabricationProducts.map((products) => (
               <Link
-                className=" text-start  max-xl:text-sm"
+                className="text-start  max-xl:text-sm"
                 href={`products/${products.link}`}
                 key={products.name}
               >
@@ -62,7 +62,7 @@ export default function page() {
           <Image
             src={conditionStorages}
             alt="Condition Storages"
-            className=" rounded-3xl  w-full h-full"
+            className="rounded-3xl  w-full h-full"
           />
           <div className="bg-lightBLue min-h-[40%] p-5 flex flex-col rounded-3xl  gap-4 grow">
             <h1 className="text-2xl max-lg:text-center">
@@ -96,7 +96,7 @@ export default function page() {
             />
             <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <Link
-                href={"/products/merchandising"}
+                href={"products/merchandising"}
                 className="text-2xl max-lg:text-center"
               >
                 Merchandising
@@ -116,7 +116,7 @@ export default function page() {
             />
             <div className="bg-lightBLue p-5  w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <Link
-                href={"/products/facades"}
+                href={"products/facades"}
                 className="text-2xl max-lg:text-center"
               >
                 Facades
@@ -136,7 +136,7 @@ export default function page() {
             />
             <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <Link
-                href={"/products/pre-engineered-building"}
+                href={"products/pre-engineered-building"}
                 className="text-2xl max-lg:text-center"
               >
                 Pre Engineered Building
@@ -156,7 +156,7 @@ export default function page() {
             />
             <div className="bg-lightBLue p-5 w-1/2 max-lg:w-full rounded-3xl  flex flex-col gap-2 grow">
               <Link
-                href={"/products/blood-bank-equipments"}
+                href={"products/blood-bank-equipments"}
                 className="text-2xl max-lg:text-center"
               >
                 Blood Bank Equipment
