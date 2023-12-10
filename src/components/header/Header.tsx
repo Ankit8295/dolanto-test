@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/../public/logo.png";
+import logo from "@/public/logo.png";
 import HamburgerMenu from "./components/HamburgerMenu";
 import { GradientBgHover, GradientButtonWrapper } from "../buttons/Buttons";
 import {
