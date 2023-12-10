@@ -19,7 +19,6 @@ export default function ClientEleCard({ client }: Props) {
           alt={client.client_name}
           src={client.image}
           loading="lazy"
-          placeholder="blur"
           className="aspect-video w-full mix-blend-multiply"
         />
       </div>
