@@ -1,5 +1,5 @@
 .svgLoading {
-  width: 2rem;
+  width: 1.8rem;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
 }
@@ -7,7 +7,7 @@
 .circleLoading {
   fill: none;
   stroke: white;
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   stroke-linecap: round;

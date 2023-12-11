@@ -6,6 +6,7 @@ import LoadingSvg from "../../Loader/LoadingSvg";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { aboutDolantoContact } from "@/src/constants/contactDetail";
+import { saveContactData } from "@/src/utils/helperFn";
 
 type FormDataType = {
   name: string;
@@ -27,14 +28,20 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
 
   const submitHandler = handleSubmit((data) => {
     setSending(true);
-    try {
-      toast.success("Submitted Successfully");
-      reset();
-      setSending(false);
-    } catch (err) {
-      console.log(err);
-      setSending(false);
-    }
+    const fileData = new FormData();
+    fileData.set("file", file as File);
+
+    saveContactData(data, fileData).then((data) => {
+      const res = JSON.parse(data);
+      if (res.status === 200) {
+        toast.success("Submitted Successfully");
+        reset();
+        setSending(false);
+      } else {
+        setSending(false);
+        toast.error(res.message);
+      }
+    });
   });
 
   return (
@@ -58,13 +65,13 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
           type="text"
           placeholder="Full Name"
           className="bg-white p-2 rounded-lg"
-          {...register("name", { required: true })}
+          {...register("full_name", { required: true })}
         />
         <input
           type="text"
           placeholder="Company Name"
           className="bg-white p-2 rounded-lg"
-          {...register("companyName", { required: true })}
+          {...register("company_name", { required: true })}
         />
         <input
           type="text"
@@ -76,7 +83,7 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
           placeholder="Message"
           className="resize-none bg-white p-2 rounded-lg"
           rows={4}
-          {...register("message", { required: true })}
+          {...register("message")}
         />
         <label className="w-full p-2 rounded-lg bg-white">
           <input
@@ -96,7 +103,7 @@ export default function ContactForm({ gradient }: { gradient?: boolean }) {
           type="submit"
           className={`w-full flex items-center text-xl justify-center gap-2 ${
             gradient ? "bg-gradient-main" : "bg-footerColor"
-          } text-white py-2 rounded-xl`}
+          } text-white py-3 rounded-xl`}
         >
           {sending && <LoadingSvg />}
           {sending ? "Sending" : "Send"}

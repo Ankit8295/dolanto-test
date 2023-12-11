@@ -1,11 +1,13 @@
 import Clientele from "@/src/components/clientele/ClientEle";
 import PageDescription from "@/src/components/page-description/PageDescription";
 import { GradientText } from "@/src/components/tags/Tags";
-import supabase from "@/supabase";
+import { createClient } from "@/src/utils/supabase/server";
 
 export const revalidate = 0;
 
 export default async function page() {
+  const supabase = await createClient();
+
   let { data: clientele, error } = await supabase.from("clientele").select("*");
 
   return (
