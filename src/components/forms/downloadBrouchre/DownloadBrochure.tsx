@@ -81,7 +81,6 @@ export default function DownloadBrochure({}: Props) {
               <label className="w-full p-2 rounded-lg bg-white">
                 <input
                   type="file"
-                  accept=".pdf, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                   {...register("file")}
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
                     setFile(e.target.files ? e.target.files[0] : null)

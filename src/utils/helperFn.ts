@@ -22,7 +22,7 @@ export const saveContactData = async (InquiryData: any, fileData: FormData) => {
     .from("contact-us")
     .insert({
       ...InquiryData,
-      file: fileUrl || null,
+      file: fileUrl,
     })
     .select();
   if (data) {
